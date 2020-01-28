@@ -5,7 +5,7 @@ const Header = (props) => {
     return (
         <div className="App-header-bg">
             <div className="Header-title">
-                <MenuIcon style={{ padding: 10}}/>
+                <MenuIcon style={{ padding: 10 }}/>
                 {props.title}
            </div>
         <header className="App-header">
