@@ -5,8 +5,8 @@ const Header = (props) => {
     return (
         <div className="App-header-bg">
             <div className="Header-title">
-                <MenuIcon style={{ padding: 10 }}/>
-                {props.title}
+                <MenuIcon class="menu-icon" />
+                <span class="header-title-text">{props.title}</span>
            </div>
         <header className="App-header">
            <nav className='App-header-link-bg'>
