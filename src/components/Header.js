@@ -5,19 +5,17 @@ const Header = (props) => {
     return (
         <div className="App-header-bg">
             <div className="Header-title">
-                <MenuIcon className="menu-icon" onClick={
-                    console.log('menu button clicked')
-                }/>
+                <MenuIcon className="menu-icon" />
                 <span className="header-title-text">{props.title}</span>
-           </div>
-        <header className="App-header">
-           <nav className='App-header-link-bg'>
-               <a className="App-header-link" href="/projects">Projects</a>
-               <a className="App-header-link" href="/resume">Resume</a>
-               <a className="App-header-link" href="/contactMe">Contact Me</a>
-               <a className="App-header-link" href="/hireMe">Hire Me!</a>
-           </nav>
-        </header>
+            </div>
+            <header className="App-header">
+                <nav className='App-header-link-bg'>
+                    <a className="App-header-link" href="/projects">Projects</a>
+                    <a className="App-header-link" href="/resume">Resume</a>
+                    <a className="App-header-link" href="/contactMe">Contact Me</a>
+                    <a className="App-header-link" href="/hireMe">Hire Me!</a>
+                </nav>
+            </header>
        </div>
     );
 }

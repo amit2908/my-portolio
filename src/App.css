@@ -109,6 +109,40 @@ a.App-header-link:hover {
   width: 20px;
 }
 
+.SideBar-bg {
+  display: flex;
+  z-index: 100;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  background-color: darksalmon;
+  width: 30%;
+}
+
+.SideBar-link-bg {
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: calc(5px + 1vmin);
+  font-family: 'highlandLight';
+  width: 100%;
+}
+
+.SideBar-link {
+    display: block;
+    color: black;
+    line-height: 64px;
+    padding: 0 24px;
+    text-decoration: none;
+    width: 100%;
+}
+
+a.SideBar-link:hover {
+  background-color: white;
+  color: red;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -137,10 +171,15 @@ a.App-header-link:hover {
     display: none;
   }
 
+
 }
 @media (min-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
   .menu-icon{
     display: none !important;
+  }
+
+  .SideBar-bg {
+    display: none;
   }
 }
 @media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */}
