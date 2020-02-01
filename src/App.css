@@ -88,8 +88,12 @@ a.App-header-link:hover {
 }
 
 .Card:hover {
-  zoom: 1.25;
+  transform: scale(1.5, 1.5);
+  z-index: 10;
+  transition: ease-out;
+  transition-duration: 0.3s;
 }
+
 
 #boxshadow {
   position: relative;
@@ -110,11 +114,13 @@ a.App-header-link:hover {
 }
 
 .SideBar-bg {
+  position: absolute;
+  /* left: -100px; */
   display: flex;
   z-index: 100;
   box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
   background-color: darksalmon;
-  width: 30%;
+  width: 100px;
 }
 
 .SideBar-link-bg {

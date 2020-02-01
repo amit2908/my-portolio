@@ -5,7 +5,7 @@ const Header = (props) => {
     return (
         <div className="App-header-bg">
             <div className="Header-title">
-                <MenuIcon className="menu-icon" />
+                <MenuIcon className="menu-icon" onClick={props.handleMenuButtonClick}/>
                 <span className="header-title-text">{props.title}</span>
             </div>
             <header className="App-header">

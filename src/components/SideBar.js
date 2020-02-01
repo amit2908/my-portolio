@@ -1,6 +1,9 @@
 import React from 'react';
 
-const SideBar = () => {
+const SideBar = (props) => {
+    if (props.hidden) {
+        return null
+    }else
     return (
         <div className="SideBar-bg">
            <nav className='SideBar-link-bg'>
