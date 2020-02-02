@@ -9,12 +9,12 @@ body {
 
 @font-face {
   font-family: 'advanced-sans-serif';
-  src: local('advanced-sans-serif'), url(./resources/fonts/advanced_sans_serif_7.ttf)
+  src: local('advanced-sans-serif'), url(./res/fonts/advanced_sans_serif_7.ttf)
 }
 
 @font-face {
   font-family: 'highlandLight';
-  src: local('advanced-sans-serif'), url(./resources/fonts/HighlandGothicLightFLF.ttf)
+  src: local('advanced-sans-serif'), url(./res/fonts/HighlandGothicLightFLF.ttf)
 }
 
 code {
