@@ -11,17 +11,18 @@ import Projects from './screens/Projects';
 import Resume from './screens/Resume';
 import ContactMe from './screens/ContactMe';
 import HireMe from './screens/HireMe';
-
+import AboutMe from './screens/AboutMe';
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <Route path='/' component={Root} />
+        <Route component={Root} />
         <Switch>
           <Route path='/Projects' component={Projects} />
           <Route path='/Resume' component={Resume} />
           <Route path='/ContactMe' component={ContactMe} />
+          <Route path='/AboutMe' component={AboutMe} />
           <Route path='/HireMe' component={HireMe} />
           <Route path='/' component={Projects} />
         </Switch>

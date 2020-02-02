@@ -13,6 +13,7 @@ const Header = (props) => {
                     <a className="App-header-link" href="/projects">Projects</a>
                     <a className="App-header-link" href="/resume">Resume</a>
                     <a className="App-header-link" href="/contactMe">Contact Me</a>
+                    <a className="App-header-link" href="/AboutMe">About Me</a>
                     <a className="App-header-link" href="/hireMe">Hire Me!</a>
                 </nav>
             </header>

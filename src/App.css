@@ -1,14 +1,3 @@
-.App {
-  text-align: center;
-  top: 0;
-  height: 20;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -19,7 +8,7 @@
   flex: auto;
   display: flex;
   align-items: left;
-  background-color: darksalmon;
+  background-image: linear-gradient(rgba(229,60,31), rgba(237,120,100));
   height: 64px;
   justify-content: space-between;
 }
@@ -28,6 +17,12 @@
   flex-direction: row;
   align-items: space-between;
   display: flex;
+  border-bottom-color:black ;
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-left-width: 0px;
+  border-bottom-width: 0.5px;
+  border-style: solid;
 }
 
 .App-header-link-bg {
@@ -55,6 +50,14 @@
 a.App-header-link:hover {
   background-color: white;
   color: red;
+  transition-duration: 0.3s;
+  border-color: black;
+  border-bottom-color:white ;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-left-width: 1px;
+  border-bottom-width: 1px;
+  border-style: solid;
 }
 
 .Header-title {
@@ -70,6 +73,14 @@ a.App-header-link:hover {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.Page-container-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -95,13 +106,13 @@ a.App-header-link:hover {
 }
 
 
-#boxshadow {
-  position: relative;
+.box-shadow {
   -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
   -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
   box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
   padding: 10px;
   background: white;
+  border-radius: 20px;
 }
 
 #icon {
@@ -147,6 +158,115 @@ a.App-header-link:hover {
 a.SideBar-link:hover {
   background-color: white;
   color: red;
+}
+
+.Project-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px;
+  width: fit-content;
+}
+
+.Project-card-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 10px;
+  width: fit-content;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: calc(10px + 1vmin);
+}
+
+.Project-card-title {  
+  margin: 20px;
+  font-weight: bold; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center
+}
+
+.Project-card-image {
+  margin: 10px
+}
+img.Project-card-image {
+  object-fit: contain;
+}
+
+img.Project-card-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px 10px rgb(235, 135, 135);
+  background: white;
+  border-radius: 10px;
+  transition: ease-out;
+  transition-duration: 0.3s;
+  
+}
+
+/* BUTTONS */
+
+.App-button {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: calc(5px + 2vmin);
+  border-radius: 5px;
+  color: white;
+  background-color: green;
+  width: 100px;
+  height: 44px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-footer-bg {
+  background-color: ivory;
+  height: 200px;
+  /* position: fixed; */
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   color: white;
+   text-align: center;
+}
+
+.footer-title {
+
+}
+
+.footer-title-text{
+
+}
+
+.App-footer {
+
+}
+
+.App-footer-link-bg {
+  margin: 0;
+  padding: 0;
+  flex-direction: row;
+  justify-content: space-between;
+  display: flex;
+  font-size: calc(5px + 1vmin);
+  font-family: 'highlandLight';
+}
+
+.App-footer-link {
+
+}
+
+a.no-decoration-link {
+  text-decoration: none;
+}
+
+#profile-picture {
+  border-radius: 50%;
+  object-fit: cover;
+  border-width: 5px;
+  border-color: darkred;
+  border-style: double;
+  margin: 10px;
 }
 
 @keyframes App-logo-spin {

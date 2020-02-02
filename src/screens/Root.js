@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../components/Header';
 import SideBar from '../components/SideBar';
+import Footer from '../components/Footer';
 
 class Root extends React.Component {
 
@@ -17,14 +18,11 @@ class Root extends React.Component {
 
     render(){
         return (
-            <div>
-            <div className="App-header-bg">
-                <Header title="Curious Coder" handleMenuButtonClick={this.handleMenuButtonClick}/>
-                <div>
-                    {this.props.children}
-                </div>
-            </div>
-            <SideBar hidden={this.state.sideBarHidden} />
+            <div style={{ flexDirection: 'column', justifyContent: 'space-between' }}>
+                    <Header title="Curious Coder" handleMenuButtonClick={this.handleMenuButtonClick} />
+
+                    {/* <Footer /> */}
+                <SideBar hidden={this.state.sideBarHidden} />
             </div>
         );
     }
