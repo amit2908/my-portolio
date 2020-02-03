@@ -1,5 +1,6 @@
 import React from 'react';
 import MenuIcon from '@material-ui/icons/Menu';
+import { Link } from "react-router-dom";
 
 const Header = (props) => {
     return (
@@ -10,11 +11,11 @@ const Header = (props) => {
             </div>
             <header className="App-header">
                 <nav className='App-header-link-bg'>
-                    <a className="App-header-link" href="/projects">Projects</a>
-                    <a className="App-header-link" href="/resume">Resume</a>
-                    <a className="App-header-link" href="/contactMe">Contact Me</a>
-                    <a className="App-header-link" href="/AboutMe">About Me</a>
-                    <a className="App-header-link" href="/hireMe">Hire Me!</a>
+                    <Link className="App-header-link" to="/projects">Projects</Link>
+                    <Link className="App-header-link" to="/resume">Resume</Link>
+                    <Link className="App-header-link" to="/contactMe">Contact Me</Link>
+                    <Link className="App-header-link" to="/aboutMe">About Me</Link>
+                    <Link className="App-header-link" to="/hireMe">Hire Me!</Link>
                 </nav>
             </header>
        </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
@@ -17,13 +17,13 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Route component={Root} />
+        <Route component={Root} basename=''/>
         <Switch>
-          <Route path='/Projects' component={Projects} />
-          <Route path='/Resume' component={Resume} />
-          <Route path='/ContactMe' component={ContactMe} />
-          <Route path='/AboutMe' component={AboutMe} />
-          <Route path='/HireMe' component={HireMe} />
+          <Route path='/projects' component={Projects} />
+          <Route path='/resume' component={Resume} />
+          <Route path='/contactMe' component={ContactMe} />
+          <Route path='/aboutMe' component={AboutMe} />
+          <Route path='/hireMe' component={HireMe} />
           <Route path='/' component={Projects} />
         </Switch>
       </Router>
