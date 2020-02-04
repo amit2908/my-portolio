@@ -6,7 +6,7 @@ class Projects extends React.Component {
     
     render(){
         return (
-            <div>
+            <div className="Project-container">
                 <ProjectCard title={R.string.en.pey.title}
                     description={R.string.en.pey.description}
                     screen1={R.image.pey.screen1}
@@ -23,7 +23,6 @@ class Projects extends React.Component {
                     screen1={R.image.pey.screen1}
                     screen2={R.image.pey.screen1}
                     logo={R.image.pey.logo}
-                    style={{flexDirection: "row-reverse"}}
                 />
 
                 <ProjectCard title={R.string.en.pey.title}

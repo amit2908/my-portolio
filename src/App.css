@@ -168,6 +168,10 @@ a.SideBar-link:hover {
   width: fit-content;
 }
 
+.Project-card:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
 .Project-card-description {
   display: flex;
   flex-direction: column;
@@ -181,6 +185,13 @@ a.SideBar-link:hover {
 .Project-card-title {  
   margin: 20px;
   font-weight: bold; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center
+}
+
+
+.Project-card-image-view {
   display: flex; 
   align-items: center; 
   justify-content: center
@@ -297,6 +308,32 @@ a.no-decoration-link {
     display: none;
   }
 
+  .Project-card {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    margin: 10px;
+    width: fit-content;
+  }
+
+
+
+  .Project-card-image-view {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+    /* object-fit: contain; */
+  }
+
+  img.Project-card-image {
+    width: 45%;
+    object-fit: cover;
+  }
+
+  .Project-card:nth-child(odd) {
+    flex-direction: column-reverse;
+  }
 
 }
 @media (min-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
@@ -307,6 +344,7 @@ a.no-decoration-link {
   .SideBar-bg {
     display: none;
   }
+
 }
 @media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */}
 @media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }

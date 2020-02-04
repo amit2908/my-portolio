@@ -5,11 +5,13 @@ import PropTypes from 'prop-types'
 const ProjectCard = (props) => {
     return (
         <div className='Project-card' style={props.style}>
-            <img src={props.screen1} alt='' width='20%' className="Project-card-image"/>
-            <img src={props.screen2} alt='' width='20%' className="Project-card-image"/>
+            <div className='Project-card-image-view'>
+                <img src={props.screen1} alt='' className="Project-card-image"/>
+                <img src={props.screen2} alt='' className="Project-card-image"/>
+            </div>
             <div className="Project-card-description">
                 <div className='Project-card-title'>
-                    <img src={props.logo} alt='' width='40px' height='40px' style={{ margin: '3px'}}/>
+                    <img src={props.logo} alt='' width='40px' height='40px' style={{ margin: '7px'}}/>
                     {props.title}
                 </div>
                 <span>{props.description}</span><br/>
