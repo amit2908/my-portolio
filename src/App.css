@@ -60,6 +60,10 @@ a.App-header-link:hover {
   border-style: solid;
 }
 
+a.App-header-link:not(:hover)  {
+  transition-duration: 0.3s;
+}
+
 .Header-title {
   display: flex;
   align-items: center;
@@ -105,6 +109,12 @@ a.App-header-link:hover {
   transition-duration: 0.3s;
 }
 
+.Card:not(:hover)  {
+  transition: ease-out;
+  transition-duration: 0.3s;
+}
+
+
 
 .box-shadow {
   -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
@@ -125,13 +135,16 @@ a.App-header-link:hover {
 }
 
 .SideBar-bg {
-  position: absolute;
-  /* left: -100px; */
-  display: flex;
-  z-index: 100;
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
-  background-color: darksalmon;
-  width: 100px;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(rgba(229,60,31), rgb(245, 39, 2));
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
 }
 
 .SideBar-link-bg {
@@ -153,6 +166,7 @@ a.App-header-link:hover {
     padding: 0 24px;
     text-decoration: none;
     width: 100%;
+    margin-left: 20px;
 }
 
 a.SideBar-link:hover {
@@ -212,6 +226,11 @@ img.Project-card-image:hover {
   transition: ease-out;
   transition-duration: 0.3s;
   
+}
+
+img.Project-card-image:not(:hover) {
+  transition: ease-out;
+  transition-duration: 0.3s;
 }
 
 /* BUTTONS */
@@ -280,6 +299,9 @@ a.no-decoration-link {
   margin: 10px;
 }
 
+
+.Hire-me-text-area{ height: 300px ; width: 60%; margin: 30px }
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -293,9 +315,6 @@ a.no-decoration-link {
 
 }
 @media (max-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ 
-  .App-header {
-    display: none;
-  }
 
 }
 @media (max-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
@@ -306,6 +325,19 @@ a.no-decoration-link {
   }
   .App-header {
     display: none;
+  }
+
+  a.SideBar-link:hover {
+    transition: ease-out;
+    transition-duration: 0.5s;
+    padding-left: 60px;
+    color: white;
+    background-color: red;
+  }
+  a.SideBar-link:not( :hover ){ transition: ease-in;
+    transition-duration: 0.3s;
+    padding-left: 20px;
+    color: black; 
   }
 
   .Project-card {
@@ -334,6 +366,8 @@ a.no-decoration-link {
   .Project-card:nth-child(odd) {
     flex-direction: column-reverse;
   }
+
+  .Hire-me-text-area { height: 500px; width: 80%; margin-top: 30px; margin-bottom: 30px }
 
 }
 @media (min-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */

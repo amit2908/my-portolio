@@ -16,13 +16,14 @@ class Root extends React.Component {
         this.setState({ sideBarHidden : !this.state.sideBarHidden })
     }
 
+
     render(){
         return (
             <div style={{ flexDirection: 'column', justifyContent: 'space-between' }}>
                     <Header title="Curious Coder" handleMenuButtonClick={this.handleMenuButtonClick} />
 
                     {/* <Footer /> */}
-                <SideBar hidden={this.state.sideBarHidden} />
+                <SideBar id="SideBar-bg" style={this.state.sideBarHidden ? {width: 0} : {width: 250}}/>
             </div>
         );
     }

@@ -17,7 +17,7 @@ class HireMe extends React.Component {
         return (
             <div className='Page-container-vertical'>
                <textarea readOnly={false} placeholder={R.string.en.hire.placeholder} 
-               style={{ height: 200, width: '40%', margin: 30}}
+               className='Hire-me-text-area'
                onChange={ (e) => this.setState({ hiringMsg: e.target.value }) }
         >{this.state.hiringMsg}</textarea>
                <a className='App-button' href={linkOfMail} target="_top">Send</a>
