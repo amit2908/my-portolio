@@ -212,7 +212,8 @@ a.SideBar-link:hover {
 }
 
 .Project-card-image {
-  margin: 10px
+  margin: 10px;
+  width: 200px;
 }
 img.Project-card-image {
   object-fit: contain;

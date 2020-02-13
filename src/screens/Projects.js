@@ -18,11 +18,15 @@ class Projects extends React.Component {
                     appStoreLink={R.string.en.pey.appStoreLink}
                 />
 
-                <ProjectCard title={R.string.en.pey.title}
-                    description={R.string.en.pey.description}
-                    screen1={R.image.pey.screen1}
-                    screen2={R.image.pey.screen1}
+                <ProjectCard title={R.string.en.orgamax.title}
+                    description={R.string.en.orgamax.description}
+                    screen1={R.image.orgamax.screen1}
+                    screen2={R.image.orgamax.screen2}
+                    language={R.string.en.orgamax.language}
+                    domain={R.string.en.orgamax.domain}
+                    appStoreLink={R.string.en.orgamax.appStoreLink}
                     logo={R.image.pey.logo}
+                    client={R.string.en.orgamax.client}
                 />
 
                 <ProjectCard title={R.string.en.pey.title}
