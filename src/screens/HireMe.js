@@ -6,7 +6,7 @@ class HireMe extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            hiringMsg : R.string.en.hire.value
+            hiringMsg : R.string.trans.hire.value
         }
     }
 
@@ -16,7 +16,7 @@ class HireMe extends React.Component {
 
         return (
             <div className='Page-container-vertical'>
-               <textarea readOnly={false} placeholder={R.string.en.hire.placeholder} 
+               <textarea readOnly={false} placeholder={R.string.trans.hire.placeholder} 
                className='Hire-me-text-area'
                onChange={ (e) => this.setState({ hiringMsg: e.target.value }) }
         >{this.state.hiringMsg}</textarea>

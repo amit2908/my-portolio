@@ -1,3 +1,15 @@
+
+const menus = [ 
+    "Projects",
+    "Resume",
+    "Blogs",
+    "Contact Me",
+    "About Me",
+    "Hire Me!"
+]
+
+
+
 const pey = {
     title: 'PEY MOBILE APP',
     description: 'The wallet allows users to transfer payments between contacts, make payments to businesses, initiate money requests from others and more. Parents can use it to invite their children to use their wallet and set restrictions on children\'s transactions.',
@@ -24,5 +36,6 @@ const hire = {
 export default {
     pey,
     orgamax,
-    hire
+    hire,
+    menus
 }

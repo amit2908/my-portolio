@@ -1,4 +1,5 @@
 import en from './translations/en'
 
+let trans = en
 
-export default { en }
+export default { trans }

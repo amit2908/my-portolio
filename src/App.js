@@ -12,6 +12,7 @@ import Resume from './screens/Resume';
 import ContactMe from './screens/ContactMe';
 import HireMe from './screens/HireMe';
 import AboutMe from './screens/AboutMe';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path='/' component={Projects} />
         </Switch>
       </Router>
+      <Footer />
     </div>
   );
 }

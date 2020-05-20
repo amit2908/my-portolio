@@ -14,14 +14,14 @@ const ProjectCard = (props) => {
                     <img src={props.logo} alt='' width='40px' height='40px' style={{ margin: '7px'}}/>
                     {props.title}
                 </div>
-                <span>{props.description}</span><br/>
-                <span style={{fontWeight: 'bold'}}>Client: </span><span>{props.client}</span><br/>
-                <span style={{fontWeight: 'bold'}}>Language: </span><span>{props.language}</span><br/>
+                <span style={styles.secondaryText}>{props.description}</span><br/>
+                <span style={styles.primaryText}>Client: </span><span style={styles.secondaryText}>{props.client}</span><br/>
+                <span style={styles.primaryText}>Language: </span><span style={styles.secondaryText}>{props.language}</span><br/>
                 {props.domain && 
-                    <span><span style={{fontWeight: 'bold'}}>Domain: </span><br/><span>{props.domain}</span></span>}
+                    <span><span style={styles.primaryText}>Domain: </span><br/><span style={styles.secondaryText}>{props.domain}</span></span>}
                     <br/>
                 {props.appStoreLink && 
-                    <span style={{ alignItems: 'center', justifyContent: 'space-between', flexDirection: 'row'}}><AppleIcon /><a className='no-decoration-link' href={props.appStoreLink}>View App on AppStore</a></span>}
+                    <span style={{ alignItems: 'center', justifyContent: 'space-between', flexDirection: 'row'}, styles.secondaryText}><AppleIcon /><a className='no-decoration-link' href={props.appStoreLink}>View App on AppStore</a></span>}
             </div>
         </div>
     )
@@ -38,6 +38,16 @@ ProjectCard.propTypes = {
     domain: PropTypes.string,
     appStoreLink: PropTypes.string,
     style: PropTypes.object
+}
+
+const styles = {
+    primaryText: {
+        fontWeight: 'bold',
+        color: 'black'
+    },
+    secondaryText: {
+        color: '#212121'
+    }
 }
   
 export default ProjectCard;
