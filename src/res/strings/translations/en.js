@@ -8,6 +8,15 @@ const menus = [
     "Hire Me!"
 ]
 
+const markets = {
+    title: 'FINSERV MARKETS APP',
+    description: 'The app provides users a central marketplace to buy physical products as well as soft products like insurances, loan, digital Gold, etc. It also allows users to transfer payments between contacts, make payments to businesses, initiate money requests from others and more. ',
+    client: 'BAJAJ FINSERV MARKETS',
+    language: 'English',
+    domain: 'Finance',
+    appStoreLink: 'https://apps.apple.com/in/app/finserv-markets/id1482914241#?platform=iphone',
+    techStacks: ['iOS', 'Swift 4.2', 'Branch SDK', 'Adobe Analytics']
+}
 
 
 const pey = {
@@ -16,16 +25,18 @@ const pey = {
     client: 'Hold Me Ltd (Israel)',
     language: 'Hebrew',
     domain: 'Finance',
-    appStoreLink: 'https://apps.apple.com/il/app/pey-wallet/id1473103150'
+    appStoreLink: 'https://apps.apple.com/il/app/pey-wallet/id1473103150',
+    techStacks: ['iOS', 'Swift 4.2']
 }
 
 const orgamax = {
     title: 'ORGAMAX',
-    description: 'The wallet allows users to transfer payments between contacts, make payments to businesses, initiate money requests from others and more. Parents can use it to invite their children to use their wallet and set restrictions on children\'s transactions.',
+    description: 'A productivity application that helps users to create workflows and assign them to their teams. Users can track the task progress using this application.',
     client: 'Deltra Business Solutions',
     language: 'German',
     domain: 'Business Productivity/Finance',
-    appStoreLink: 'https://itunes.apple.com/us/app/rechnung-in-1-minute-orgamax/id1434483537?ls=1&mt=8'
+    appStoreLink: 'https://itunes.apple.com/us/app/rechnung-in-1-minute-orgamax/id1434483537?ls=1&mt=8',
+    techStacks: ['iOS', 'Swift 4.2', 'Firebase Cloud Messaging', 'In-app Purchase']
 }
 
 const hire = {
@@ -34,6 +45,7 @@ const hire = {
 }
 
 export default {
+    markets,
     pey,
     orgamax,
     hire,

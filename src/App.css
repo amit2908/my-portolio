@@ -63,6 +63,7 @@ a.App-header-link:hover {
 
 a.App-header-link:not(:hover)  {
   transition-duration: 0.3s;
+  animation: menu-bubble-in alternate 1s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .Header-title {
@@ -79,6 +80,7 @@ a.App-header-link:not(:hover)  {
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  color: white;
 }
 
 .Page-container-vertical {
@@ -87,6 +89,7 @@ a.App-header-link:not(:hover)  {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  width: 60%;
 }
 
 .Card {
@@ -337,6 +340,15 @@ a.no-decoration-link {
   }
 }
 
+@keyframes menu-bubble-in {
+  from {
+    transform: rotate(-30deg) scale3d(1.2, 1.2, 1.2);
+  }
+  to {
+    transform: rotate(0deg) scale3d(1, 1, 1);
+  }
+}
+
 
 @media (max-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */
 
@@ -370,6 +382,7 @@ a.no-decoration-link {
   .Project-container {
     display: flex;
     align-items: center;
+    margin: 0
   }
 
   .Project-card {
