@@ -9,9 +9,6 @@ import orgamaxLogo from '../images/orgamax/logo.png'
 import markets1 from '../images/markets/MarketsHome.png'
 import markets2 from '../images/markets/MarketseStore.png'
 import marketsLogo from '../images/markets/logo.png'
-import coffeeWallpaper from '../images/wallpaper.jpeg'
-
-import wireFrame from '../images/iPhoneWireFrame.png'
 
 import dp from '../images/dp2.jpeg'
 
@@ -34,7 +31,7 @@ const markets = {
 }
 
 const others = {
-    wallpaper: coffeeWallpaper
+
 }
 
 export default {
