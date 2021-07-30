@@ -1,22 +1,43 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import R from '../res/index'
 
-const SideBar = (props) => {
-    if (props.hidden) {
-        return null
-    }else
-    return (
-        <div className="SideBar-bg" style={props.style}>
-            <nav className='SideBar-link-bg'>
-                <a className="SideBar-link" href="/projects">   {R.string.trans.menus[0]}  </a>
-                <a className="SideBar-link" href="/resume">     {R.string.trans.menus[1]}  </a>
-                <a className="SideBar-link" href="/hireMe">     {R.string.trans.menus[2]}  </a>
-                <a className="SideBar-link" href="/contactMe">  {R.string.trans.menus[3]}  </a>
-                <a className="SideBar-link" href="/aboutMe">    {R.string.trans.menus[4]}  </a>
-                <a className="SideBar-link" href="/hireMe">     {R.string.trans.menus[5]}  </a>
-            </nav>
-       </div>
-    );
+class SideBar extends React.Component{
+
+
+    constructor(props){
+        super(props)
+        this.state = {
+            bubbleOut: false,
+            index : 0
+        }
+    }
+
+
+    render(){
+        let props = this.props
+        let menus = R.string.trans.menus
+        if (props.hidden) {
+            return null
+        }else
+        return (
+            <div className="SideBar-bg" style={props.style}>
+                <nav className='SideBar-link-bg'>
+                {menus.map(function(menu, i){
+                                return <a className="SideBar-link" href={menu.link}> { menu.title }  </a>;
+                    })}
+                </nav>
+           </div>
+        );
+
+    }
+
+    
+}
+
+SideBar.propTypes = {
+    handleMenuButtonClick: PropTypes.func,
+    title: PropTypes.string.isRequired
 }
   
 export default SideBar;

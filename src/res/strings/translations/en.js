@@ -1,11 +1,29 @@
 
-const menus = [ 
-    "Projects",
-    "Resume",
-    "Blogs",
-    "Contact Me",
-    "About Me",
-    "Hire Me!"
+const menus = [
+     {
+        title: "Projects",
+        link: "/projects"
+    },
+    {
+        title: "Resume",
+        link: "/resume"
+    },
+     {
+        title: "Blogs",
+        link: "/hireMe"
+    },
+    {
+        title: "Contact Me",
+        link: "/contactMe"
+    },
+     {
+        title: "About Me",
+        link: "/aboutMe"
+    },
+     {
+        title: "Hire Me!",
+        link: "/hireMe"
+    }
 ]
 
 const markets = {

@@ -12,8 +12,8 @@ class AboutMe extends React.Component {
     render(){
 
         return (
-            <div className="Page-container">
-            <div className='Page-container-vertical' style={{backgroundColor: '#d32c35'}}>
+            <div className="Page-container" style={styles.darkBackground}>
+            <div className='Page-container-vertical' style={styles.darkBackground}>
                <img src={R.image.dp} alt='' id='profile-picture' width='150px' height='150px'/>
                <div style={styles.page, {textAlign: 'center' }}>
                    <span>I am self-motivated programmer. Love to code especially when I solve problems of others.</span><br/>
@@ -58,5 +58,9 @@ const styles = {
     secondaryText: {
         color: '#212121'
     },
-    logo: { margin: '7px', width:'40px', height:'40px'}
+    logo: { margin: '7px', width:'40px', height:'40px'},
+    darkBackground: {
+        backgroundColor: 'rgb(25,25,25)',
+        color: 'white'
+    }
 }

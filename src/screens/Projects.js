@@ -7,8 +7,8 @@ class Projects extends React.Component {
     render() {
         return (
             <div>
+                
                 <div className="Project-container">
-
                     <ProjectCard title={R.string.trans.markets.title}
                         description={R.string.trans.markets.description}
                         screen1={R.image.markets.screen1}

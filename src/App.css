@@ -8,8 +8,9 @@
   flex: auto;
   display: flex;
   align-items: left;
-  background-image: linear-gradient(rgba(229,60,31), rgba(237,120,100));
+  background-image: linear-gradient(rgb(236, 20, 20), #000);
   height: 64px;
+  opacity: 1;
   justify-content: space-between;
 }
 
@@ -37,7 +38,7 @@
 
 .App-header-link {
     display: block;
-    color: black;
+    color: white;
     line-height: 64px;
     padding: 0 24px;
     text-decoration: none;
@@ -47,23 +48,42 @@
   margin: 10px;
 }
 
-a.App-header-link:hover {
+.Normal {
+    display: block;
+    color: white;
+    line-height: 64px;
+    padding: 0 24px;
+    text-decoration: none;
+}
+
+.Bubble-Out {
   background-color: white;
   color: red;
-  transition-duration: 0.3s;
-  border-color: black;
+  /* transition-duration: 0.3s; */
+  transform: scale3d(1.2, 1.2, 1.2);
+  /* border-color: black;
   border-bottom-color:white ;
   border-top-width: 1px;
   border-right-width: 1px;
   border-left-width: 1px;
   border-bottom-width: 1px;
-  border-style: solid;
-  animation: menu-bubble-out alternate 1s cubic-bezier(0.19, 1, 0.22, 1);
+  border-style: solid; */
+  text-decoration: none;
+  text-align: center;
+  line-height: 64px;
+  padding: 0 24px;
+  /* animation: menu-bubble-out alternate 1s cubic-bezier(0.19, 1, 0.22, 1);  */
+}
+
+a.App-header-link:hover {
+  background-color: white;
+  color: red;
+  animation: menu-bubble-out 1s forwards cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 a.App-header-link:not(:hover)  {
   transition-duration: 0.3s;
-  animation: menu-bubble-in alternate 1s cubic-bezier(0.19, 1, 0.22, 1);
+  animation: menu-bubble-in 1s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .Header-title {
@@ -72,7 +92,7 @@ a.App-header-link:not(:hover)  {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   font-family: 'advanced-sans-serif';
-  color: black;
+  color: white;
 }
 
 .Page-container {
@@ -145,10 +165,11 @@ a.App-header-link:not(:hover)  {
   z-index: 1;
   top: 0;
   left: 0;
-  background-image: linear-gradient(rgba(229,60,31), rgb(245, 39, 2));
+  background-color: rgb(25,25,25);
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
+  color: white;
 }
 
 .SideBar-link-bg {
@@ -161,11 +182,12 @@ a.App-header-link:not(:hover)  {
   font-size: calc(5px + 1vmin);
   font-family: 'highlandLight';
   width: 100%;
+  color: white;
 }
 
 .SideBar-link {
     display: block;
-    color: black;
+    color: white;
     line-height: 64px;
     padding: 0 24px;
     text-decoration: none;
@@ -197,7 +219,7 @@ a.SideBar-link:hover {
   flex-direction: row-reverse;
 }
 
-.Project-card-description {
+.Project-card-description{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -206,6 +228,7 @@ a.SideBar-link:hover {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: calc(10px + 1vmin);
 }
+
 
 .Project-card-title {  
   margin: 20px;
@@ -231,8 +254,8 @@ img.Project-card-image {
 }
 
 img.Project-card-image:hover {
-  transform: scale(1.1);
-  box-shadow: 0px 0px 10px 10px rgb(235, 135, 135);
+  transform: scale(1.2);
+  /* box-shadow: 0px 0px 10px 10px rgb(235, 135, 135); */
   background: white;
   border-radius: 10px;
   transition: ease-out;
@@ -243,6 +266,19 @@ img.Project-card-image:hover {
 img.Project-card-image:not(:hover) {
   transition: ease-out;
   transition-duration: 0.3s;
+}
+
+div.Overlay {
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 10;
+  bottom: 0;
+  width: '100%';
+  height: '100%';
+  background: #000; 
 }
 
 /* BUTTONS */
@@ -263,7 +299,9 @@ img.Project-card-image:not(:hover) {
 
 .App-footer-bg {
   position: relative;
-    background-image: linear-gradient(rgba(229,60,31), rgb(240, 108, 85));
+    /* background-image: linear-gradient(rgba(229,60,31), rgb(240, 108, 85)); */
+    background-color: rgb(25,25,25);
+    color: white;
     height: 200px;
     left: 0;
     bottom: 0;
@@ -287,6 +325,8 @@ img.Project-card-image:not(:hover) {
 .App-footer {
   display: flex;
   justify-content: space-around;
+  background-color: rgb(25,25,25);
+  color: white;
 }
 
 .App-footer-link-bg {
@@ -297,13 +337,16 @@ img.Project-card-image:not(:hover) {
   display: flex;
   font-size: calc(5px + 1vmin);
   font-family: 'highlandLight';
+  background-color: rgb(25,25,25);
+  color: white;
 }
 
 
 .App-footer-link {
-  color: black;
   text-decoration: none;
   padding: 5px;
+  background-color: rgb(25,25,25);
+  color: white;
 }
 
 a.no-decoration-link {
@@ -333,6 +376,25 @@ a.no-decoration-link {
 
 @keyframes menu-bubble-out {
   from {
+    transform: scale3d(1, 1, 1);
+  }
+  to {
+    transform: scale3d(1.2, 1.2, 1.2);
+  }
+}
+
+@keyframes menu-bubble-in {
+  from {
+    transform: scale3d(1.2, 1.2, 1.2);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+
+@keyframes menu-bubble-rotated-out {
+  from {
     transform: rotate(0deg) scale3d(1, 1, 1);
   }
   to {
@@ -340,7 +402,7 @@ a.no-decoration-link {
   }
 }
 
-@keyframes menu-bubble-in {
+@keyframes menu-bubble-rotated-in {
   from {
     transform: rotate(-30deg) scale3d(1.2, 1.2, 1.2);
   }
@@ -375,8 +437,10 @@ a.no-decoration-link {
   }
   a.SideBar-link:not( :hover ){ transition: ease-in;
     transition-duration: 0.3s;
-    padding-left: 20px;
-    color: black; 
+    padding-left: 50px;
+    color: white; 
+    background-color: black;
+    opacity: 0.5;
   }
 
   .Project-container {
