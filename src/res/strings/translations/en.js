@@ -1,7 +1,7 @@
 
 const menus = [
      {
-        title: "Projects",
+        title: "My Works",
         link: "/projects"
     },
     {
@@ -10,19 +10,15 @@ const menus = [
     },
      {
         title: "Blogs",
-        link: "/hireMe"
-    },
-    {
-        title: "Contact Me",
-        link: "/contactMe"
+        link: "/blogs"
     },
      {
         title: "About Me",
         link: "/aboutMe"
     },
-     {
-        title: "Hire Me!",
-        link: "/hireMe"
+    {
+        title: "Contact Me",
+        link: "/contactMe"
     }
 ]
 
@@ -62,10 +58,69 @@ const hire = {
     value: 'Hi Shubham,\n\n I would like to hear more about your works. Lets meet on this weekend to discuss ...'
 }
 
+const rawTitles = {
+    projectPageTitle: 'Have a look at my'
+}
+
+const favouriteBlogs = [
+    {
+        title: "Swift by Sundell",
+        description: "",
+        link: "https://www.swiftbysundell.com/"
+    },
+    {
+        title: "Essential Developer by Caio and Mike",
+        description: "",
+        link: "https://essentialdeveloper.com"
+    },
+    {
+        title: "Hacking With Swift",
+        description: "",
+        link: "https://www.hackingwithswift.com/"
+    },
+    {
+        title: "Cocoacasts by Bart Jacobs",
+        description: "",
+        link: "https://cocoacasts.com/"
+    },
+    {
+        title: "raywenderlich.com",
+        description: "",
+        link: "https://www.raywenderlich.com/"
+    }
+]
+
+
+const favouriteBooks = [
+    {
+        title: "Getting Things Done",
+        description: "",
+        link: ""
+    },
+    {
+        title: "How to win friends",
+        description: "",
+        link: ""
+    },
+    {
+        title: "The subtle art of not giving a fuck",
+        description: "",
+        link: ""
+    },
+    {
+        title: "Getting Things Done",
+        description: "",
+        link: ""
+    }
+]
+
 export default {
     markets,
     pey,
     orgamax,
     hire,
-    menus
+    menus,
+    rawTitles,
+    favouriteBlogs,
+    favouriteBooks
 }

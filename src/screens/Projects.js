@@ -13,14 +13,14 @@ class Projects extends React.Component {
                         description={R.string.trans.markets.description}
                         screen1={R.image.markets.screen1}
                         screen2={R.image.markets.screen2}
-                        logo={R.image.pey.logo}
-                        language={R.string.trans.pey.language}
-                        domain={R.string.trans.pey.domain}
-                        appStoreLink={R.string.trans.pey.appStoreLink}
+                        logo={R.image.markets.logo}
+                        language={R.string.trans.markets.language}
+                        domain={R.string.trans.markets.domain}
+                        appStoreLink={R.string.trans.markets.appStoreLink}
                         techStacks={R.string.trans.markets.techStacks}
                         logo={R.image.markets.logo}
                     />
-
+                    <div className='Divider'></div>
                     <ProjectCard title={R.string.trans.pey.title}
                         description={R.string.trans.pey.description}
                         screen1={R.image.pey.screen1}
@@ -32,7 +32,7 @@ class Projects extends React.Component {
                         appStoreLink={R.string.trans.pey.appStoreLink}
                         techStacks={R.string.trans.pey.techStacks}
                     />
-
+                    <div className='Divider'></div>
                     <ProjectCard title={R.string.trans.orgamax.title}
                         description={R.string.trans.orgamax.description}
                         screen1={R.image.orgamax.screen1}

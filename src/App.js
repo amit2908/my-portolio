@@ -13,6 +13,7 @@ import ContactMe from './screens/ContactMe';
 import HireMe from './screens/HireMe';
 import AboutMe from './screens/AboutMe';
 import Footer from './components/Footer';
+import Blogs from './screens/Blogs';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path='/contactMe' component={ContactMe} />
           <Route path='/aboutMe' component={AboutMe} />
           <Route path='/hireMe' component={HireMe} />
+          <Route path='/blogs' component={Blogs} />
           <Route path='/' component={Projects} />
         </Switch>
       </Router>

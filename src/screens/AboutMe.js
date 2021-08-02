@@ -1,6 +1,6 @@
-import { textAlign } from '@material-ui/system';
 import React from 'react';
 import R from '../res/index'
+
 
 class AboutMe extends React.Component {
 
@@ -10,7 +10,8 @@ class AboutMe extends React.Component {
     }
 
     render(){
-
+        let favouriteBlogs = R.string.trans.favouriteBlogs
+        let favouriteBooks = R.string.trans.favouriteBooks
         return (
             <div className="Page-container" style={styles.darkBackground}>
             <div className='Page-container-vertical' style={styles.darkBackground}>
@@ -20,23 +21,27 @@ class AboutMe extends React.Component {
                     <span>My favourite pass-time is product design and read books.</span><br/>
                </div>
 
+                <div>
                <div style={styles.page}>
                    <span style={styles.primaryText}>Favourite Books</span><br/>
-                    <span>Getting Things Done</span><br/>
-                    <span>How to win friends</span><br/>
-                    <span>The subtle art of not giving a f*ck!</span><br/>
-                    <span>Getting Things Done</span><br/>
+                   {favouriteBooks.map(function(book, i){
+                       if (book.link) {
+                        return (<a href={book.link} style={styles.secondaryText}>{book.title}<br/></a>)
+                       } else  {
+                           return (<span style={styles.secondaryText}>{book.title}<br/></span>)
+                       }
+                       
+                   })}
                </div>
 
 
                <div style={styles.page}>
                    <span style={styles.primaryText}>Blogs I follow</span><br/>
-                    <span>Getting Things Done</span><br/>
-                    <span>How to win friends</span><br/>
-                    <span>The subtle art of not giving a f*ck!</span><br/>
-                    <span>Getting Things Done</span><br/>
+                   {favouriteBlogs.map(function(blog, i){
+                       return (<a href={blog.link} style={styles.secondaryText}>{blog.title}<br/></a>)
+                   })}
                </div>
-               
+               </div>
             </div>
 
             </div>
@@ -48,15 +53,15 @@ export default AboutMe;
 
 const styles = {
     page: {
-        marginHorizontal: 100,
         padding: 30
     },
     primaryText: {
+        fontSize: 18,
         fontWeight: 'bold',
         color: 'white'
     },
     secondaryText: {
-        color: '#212121'
+        color: 'white'
     },
     logo: { margin: '7px', width:'40px', height:'40px'},
     darkBackground: {

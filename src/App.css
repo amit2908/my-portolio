@@ -112,6 +112,10 @@ a.App-header-link:not(:hover)  {
   width: 60%;
 }
 
+.centered {
+  align-self: center;
+}
+
 .Card {
   display: flex;
   align-items: center;
@@ -206,6 +210,11 @@ a.SideBar-link:hover {
   margin-right: 15em;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.Divider {
+  height: 1px;
+  background-color: black;
 }
 
 .Project-card {
