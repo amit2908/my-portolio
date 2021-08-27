@@ -19,7 +19,7 @@ class Root extends React.Component {
 
     render(){
         return (
-            <div style={{ flexDirection: 'column', justifyContent: 'space-between', backgroundColor: 'rgb(25,25,25)', color: '#fff' }}>
+            <div style={{ flexDirection: 'column', justifyContent: 'space-between'}}>
                 <div>
                 <Header title="Curious Coder" handleMenuButtonClick={this.handleMenuButtonClick} />
                     <SideBar id="SideBar-bg" style={this.state.sideBarHidden ? {width: 0} : {width: 250}}/>

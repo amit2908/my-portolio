@@ -12,35 +12,69 @@ class AboutMe extends React.Component {
     render(){
         let favouriteBlogs = R.string.trans.favouriteBlogs
         let favouriteBooks = R.string.trans.favouriteBooks
+        let techBooks = R.string.trans.techBooks
         return (
             <div className="Page-container" style={styles.darkBackground}>
             <div className='Page-container-vertical' style={styles.darkBackground}>
                <img src={R.image.dp} alt='' id='profile-picture' width='150px' height='150px'/>
-               <div style={styles.page, {textAlign: 'center' }}>
+
+               
+
+               <div style={{textAlign: 'center' }}>
                    <span>I am self-motivated programmer. Love to code especially when I solve problems of others.</span><br/>
-                    <span>My favourite pass-time is product design and read books.</span><br/>
+                    <span>My favourite pass-time is product design, reading books and trekking mountains.</span><br/>
                </div>
 
+               <div style={styles.content}>
+
+               <div>
+                   <span style={styles.primaryText}>Blogs I follow</span><br/><br/>
+                   {favouriteBlogs.map(function(blog, i){
+                       return (<span className='link'>
+                                    <a href={blog.link} style={styles.secondaryText}>{blog.title}<br/><br/></a>
+                           </span>)
+                   })}
+               </div>
+
+               <br/>
                 <div>
-               <div style={styles.page}>
-                   <span style={styles.primaryText}>Favourite Books</span><br/>
-                   {favouriteBooks.map(function(book, i){
+                   <span style={styles.primaryText}>Tech Books I like</span><br/>
+                   {techBooks.map(function(book, i){
                        if (book.link) {
-                        return (<a href={book.link} style={styles.secondaryText}>{book.title}<br/></a>)
+                        return (<p className='boxed-link'><a href={book.link}>
+                            <span style={styles.secondaryText}>{book.title}<br/></span>
+                            <span style={styles.author}>{"— " + book.writer}<br/></span>
+                            </a></p>)
                        } else  {
-                           return (<span style={styles.secondaryText}>{book.title}<br/></span>)
+                           return (<p>
+                                    <span style={styles.secondaryText}>{book.title}<br/></span>
+                                    <span style={styles.author}>{"— " + book.writer}<br/></span>
+                                    </p>)
                        }
                        
                    })}
                </div>
-
-
-               <div style={styles.page}>
-                   <span style={styles.primaryText}>Blogs I follow</span><br/>
-                   {favouriteBlogs.map(function(blog, i){
-                       return (<a href={blog.link} style={styles.secondaryText}>{blog.title}<br/></a>)
+                    <br/>
+               <div>
+                   <span style={styles.primaryText}>Motivational Books</span><br/>
+                   {favouriteBooks.map(function(book, i){
+                       if (book.link) {
+                        return (<p className='link'><a className='boxed-link' href={book.link}>
+                            <span style={styles.secondaryText}>{book.title}<br/></span>
+                            <span style={styles.author}>{"— " + book.writer}<br/></span>
+                            </a></p>)
+                       } else  {
+                           return (<p>
+                                    <span style={styles.secondaryText}>{book.title}<br/></span>
+                                    <span style={styles.author}>{"— " + book.writer}<br/></span>
+                                    </p>)
+                       }
+                       
                    })}
                </div>
+               <br/>
+
+               
                </div>
             </div>
 
@@ -52,8 +86,11 @@ class AboutMe extends React.Component {
 export default AboutMe;
 
 const styles = {
-    page: {
-        padding: 30
+    content: {
+        padding: 30,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'left'
     },
     primaryText: {
         fontSize: 18,
@@ -61,6 +98,11 @@ const styles = {
         color: 'white'
     },
     secondaryText: {
+        color: 'white'
+    },
+    author: {
+        fontStyle: 'italic',
+        fontSize: 12,
         color: 'white'
     },
     logo: { margin: '7px', width:'40px', height:'40px'},

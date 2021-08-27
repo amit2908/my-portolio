@@ -6,14 +6,15 @@ class Projects extends React.Component {
 
     render() {
         return (
-            <div>
-                
-                <div className="Project-container">
+            <div className="Centered-Items-Horizontally">
+
+                <div className='Compact-Page-Size'>
                     <ProjectCard title={R.string.trans.markets.title}
                         description={R.string.trans.markets.description}
                         screen1={R.image.markets.screen1}
                         screen2={R.image.markets.screen2}
                         logo={R.image.markets.logo}
+                        client={R.string.trans.markets.client}
                         language={R.string.trans.markets.language}
                         domain={R.string.trans.markets.domain}
                         appStoreLink={R.string.trans.markets.appStoreLink}
@@ -44,10 +45,13 @@ class Projects extends React.Component {
                         logo={R.image.orgamax.logo}
                         client={R.string.trans.orgamax.client}
                     />
+                </div>
 
-                    
-                </div>
-                </div>
+                <p>
+                    <span>I have contributed in more than 25 iOS and React Native apps in my career so far,<br/>
+                     but the above mentioned are my major works so far.</span>
+                </p>
+            </div>
 
         );
     }

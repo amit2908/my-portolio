@@ -25,7 +25,7 @@ const menus = [
 const markets = {
     title: 'FINSERV MARKETS APP',
     description: 'The app provides users a central marketplace to buy physical products as well as soft products like insurances, loan, digital Gold, etc. It also allows users to transfer payments between contacts, make payments to businesses, initiate money requests from others and more. ',
-    client: 'BAJAJ FINSERV MARKETS',
+    client: 'Bajaj Finserv Direct Limited',
     language: 'English',
     domain: 'Finance',
     appStoreLink: 'https://apps.apple.com/in/app/finserv-markets/id1482914241#?platform=iphone',
@@ -64,14 +64,14 @@ const rawTitles = {
 
 const favouriteBlogs = [
     {
-        title: "Swift by Sundell",
-        description: "",
-        link: "https://www.swiftbysundell.com/"
-    },
-    {
         title: "Essential Developer by Caio and Mike",
         description: "",
         link: "https://essentialdeveloper.com"
+    },
+    {
+        title: "Swift by Sundell",
+        description: "",
+        link: "https://www.swiftbysundell.com/"
     },
     {
         title: "Hacking With Swift",
@@ -91,26 +91,46 @@ const favouriteBlogs = [
 ]
 
 
+const techBooks = [
+    {
+        title: "Data Structures and Algorithms using Swift",
+        description: "",
+        link: "",
+        writer: "raywenderlich.com"
+    },
+
+    {
+        title: "UML Distilled",
+        description: "",
+        link: "",
+        writer: "Martin Fowler"
+    }
+]
+
 const favouriteBooks = [
     {
         title: "Getting Things Done",
         description: "",
-        link: ""
+        link: "",
+        writer: "David Allen"
     },
     {
         title: "How to win friends",
         description: "",
-        link: ""
+        link: "https://www.amazon.in/How-Win-Friends-Influence-People/dp/0091906350",
+        writer: "Dale Carnegie"
     },
     {
-        title: "The subtle art of not giving a fuck",
+        title: "The subtle art of not giving a f*ck",
         description: "",
-        link: ""
+        link: "",
+        writer: "Mark Manson"
     },
     {
-        title: "Getting Things Done",
+        title: "Meditation and its methods",
         description: "",
-        link: ""
+        link: "",
+        writer: "Swami Vivekanand"
     }
 ]
 
@@ -122,5 +142,6 @@ export default {
     menus,
     rawTitles,
     favouriteBlogs,
-    favouriteBooks
+    favouriteBooks,
+    techBooks
 }
