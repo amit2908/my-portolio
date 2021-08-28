@@ -372,7 +372,6 @@ div.Overlay {
     /* background-image: linear-gradient(rgba(229,60,31), rgb(240, 108, 85)); */
     background-color: #5CDB95;
     color: white;
-    height: 200px;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -381,6 +380,7 @@ div.Overlay {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
+    padding: 25px;
 }
 
 .footer-title {
