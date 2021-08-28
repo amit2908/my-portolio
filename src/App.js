@@ -10,7 +10,6 @@ import Root from './screens/Root';
 import Projects from './screens/Projects';
 import Resume from './screens/Resume';
 import ContactMe from './screens/ContactMe';
-import HireMe from './screens/HireMe';
 import AboutMe from './screens/AboutMe';
 import Footer from './components/Footer';
 import Blogs from './screens/Blogs';
@@ -25,7 +24,6 @@ function App() {
           <Route path='/resume' component={Resume} />
           <Route path='/contactMe' component={ContactMe} />
           <Route path='/aboutMe' component={AboutMe} />
-          <Route path='/hireMe' component={HireMe} />
           <Route path='/blogs' component={Blogs} />
           <Route path='/' component={Projects} />
         </Switch>

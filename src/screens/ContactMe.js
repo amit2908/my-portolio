@@ -4,6 +4,7 @@ import Email from '@material-ui/icons/Email';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import Facebook from '@material-ui/icons/Facebook';
 import GitHub from '@material-ui/icons/GitHub';
+import SendRoundedIcon from '@material-ui/icons/SendRounded';
 import R from '../res/index'
 
 class ContactMe extends React.Component {
@@ -27,6 +28,7 @@ class ContactMe extends React.Component {
                         className='Hire-me-text-area'
                         onChange={(e) => this.setState({ hiringMsg: e.target.value })}
                     >{this.state.hiringMsg}</textarea>
+                    <SendRoundedIcon/>
                     <a className='App-button' href={linkOfMail} target="_top">Send</a>
                 </div>
             </div>

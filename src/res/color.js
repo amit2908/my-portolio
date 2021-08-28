@@ -63,32 +63,41 @@ const color = {
     AppScreensBackgroundColor: 'rgba(241,242,248,1)',
     HomeButtonsShadowColor: 'rgba(66.3, 117.3, 150.4, 0.24)',
     HomeGreetingColor: 'rgba(40, 49, 64, 1)',
-    
-    TripsDateColor: 'rgba(141, 146, 156, 1)',
-    TripsAddressColor: 'rgba(40, 49, 64, 1)',
-    // get primary() { return this.lightGreen600; },
-    get primary() { return this.submitButtonBGColor; },
-    get primaryTranslucent() { return this.submitButtonBGColor + "B3" }, // 70% opacity
-    get primaryDark() { return this.lightGreen700; },
-    get accent() { return this.deepPurple500; },
 
-    get mainTextColor() { return this.grey900; },
-    get secondaryTextColor() { return this.grey600; },
+    AppGreen: '#5CDB95',
+    AppButtonBlue: '#05386b',
+
+    appColors: {
+        primaryBg: '#5CDB95',
+        primaryBgContrast: '#05386b'
+    }
+    
+    // get primary() { return this.lightGreen600; },
+    // get primary() { return this.submitButtonBGColor; },
+    // get primaryTranslucent() { return this.submitButtonBGColor + "B3" }, // 70% opacity
+    // get primaryDark() { return this.lightGreen700; },
+    // get accent() { return this.deepPurple500; },
+
+    // get mainTextColor() { return this.grey900; },
+    // get secondaryTextColor() { return this.grey600; },
 
     //get vehicleIconColor() { return brand.mobileUI.colorScheme.vehicleColor },
-    get vehicleIconColor() { return '#000000' },
+    // get vehicleIconColor() { return '#000000' },
 
     // black with 20% opacity
     //get translucent() { return this.black + "33" },
     
 
-    get modalBackground() { return this.black + "99"; },
+    // get modalBackground() { return this.black + "99"; },
 
     // white with 20% opacity
-    get translucentLight() { return this.whiteSmoke + "33" },
+    // get translucentLight() { return this.whiteSmoke + "33" },
 
     // For dev purpose
-    get reserved() { return this.pink100; },
+    // get reserved() { return this.pink100; },
+
+
+
 };
 
 export default color;

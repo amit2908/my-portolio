@@ -29,7 +29,7 @@ const markets = {
     language: 'English',
     domain: 'Finance',
     appStoreLink: 'https://apps.apple.com/in/app/finserv-markets/id1482914241#?platform=iphone',
-    techStacks: ['iOS', 'Swift 4.2', 'Branch SDK', 'Adobe Analytics']
+    techStacks: ['iOS', 'Swift 5.0', 'Branch SDK', 'Adobe Analytics']
 }
 
 

@@ -47,10 +47,14 @@ class Projects extends React.Component {
                     />
                 </div>
 
+               <div className='thick-bordered standard-padding standard-margin'>
                 <p>
                     <span>I have contributed in more than 25 iOS and React Native apps in my career so far,<br/>
-                     but the above mentioned are my major works so far.</span>
+                     but the above mentioned are my major works in all of that. <br/>
+                     Some of them are developed from scratch to deployment on AppStore directly by me.
+                     </span>
                 </p>
+                </div>
             </div>
 
         );

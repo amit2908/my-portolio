@@ -125,6 +125,12 @@ a.App-header-link:not(:hover)  {
   align-items: center;
 }
 
+.Centered-Items-Vertically {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .Page-container-vertical {
   display: flex;
   flex-direction: column;
@@ -137,6 +143,22 @@ a.App-header-link:not(:hover)  {
 .centered {
   align-self: center;
 }
+
+.thick-bordered {
+  border-color: #05386b;
+  border-style: dashed;
+  border-width: 1;
+  border-radius: 10px;
+}
+
+.standard-padding {
+  padding: 10px;
+}
+
+.standard-margin {
+  margin: 20px;
+}
+
 
 .Card {
   display: flex;
@@ -321,16 +343,20 @@ div.Overlay {
 
 .App-button {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: calc(5px + 2vmin);
-  border-radius: 5px;
-  color: white;
-  background-color: #05386b;
+  font-size: 12;
+  color: #05386b;
   width: 100px;
   height: 44px;
   text-decoration: none;
+  padding-left: 10px;
+  padding-right: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 50px;
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  box-shadow:  11px 11px 33px #bdbdbd,
+               -11px -11px 33px #ffffff;
 }
 
 .Non-Decorated-Link {
@@ -407,7 +433,15 @@ a.no-decoration-link {
 }
 
 
-.Hire-me-text-area{ height: 300px ; width: 60%; margin: 30px }
+.Hire-me-text-area{ 
+  height: 300px ; width: 60%; margin: 30px;
+  padding: 20px;
+  border-color: white;
+  border-radius: 10px;
+background: #ffffff;
+box-shadow: inset 7px 7px 26px #e0e0e0,
+            inset -7px -7px 26px #ffffff;
+}
 
 @keyframes App-logo-spin {
   from {
