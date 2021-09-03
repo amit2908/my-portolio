@@ -231,6 +231,20 @@ a.App-header-link:not(:hover)  {
   color: white;
 }
 
+.SideBar-link-bg-selected {
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: calc(5px + 1vmin);
+  font-family: 'highlandLight';
+  width: 100%;
+  color: darkblue;
+  background-color: greenyellow;
+}
+
 .SideBar-link {
     display: block;
     color: white;
@@ -434,7 +448,7 @@ a.no-decoration-link {
 
 
 .Hire-me-text-area{ 
-  height: 300px ; width: 60%; margin: 30px;
+  height: 280px ; width: 60%; margin: 30px;
   padding: 20px;
   border-color: white;
   border-radius: 10px;
@@ -533,6 +547,10 @@ box-shadow: inset 7px 7px 26px #e0e0e0,
     justify-content: space-between;
     margin: 10px;
     width: fit-content;
+  }
+
+  .Compact-Page-Size {
+    width: 90%;
   }
 
 

@@ -19,7 +19,6 @@ class Projects extends React.Component {
                         domain={R.string.trans.markets.domain}
                         appStoreLink={R.string.trans.markets.appStoreLink}
                         techStacks={R.string.trans.markets.techStacks}
-                        logo={R.image.markets.logo}
                     />
                     <div className='Divider'></div>
                     <ProjectCard title={R.string.trans.pey.title}

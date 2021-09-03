@@ -14,7 +14,11 @@ import AboutMe from './screens/AboutMe';
 import Footer from './components/Footer';
 import Blogs from './screens/Blogs';
 
-function App() {
+class App extends React.Component {
+
+  
+
+render(){
   return (
     <div className="App">
       <Router>
@@ -31,6 +35,8 @@ function App() {
       <Footer />
     </div>
   );
+}  
+  
 }
 
 export default App;

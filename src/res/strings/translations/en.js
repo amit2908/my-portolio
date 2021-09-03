@@ -1,22 +1,27 @@
 
 const menus = [
      {
+        key: 0,
         title: "My Works",
         link: "/projects"
     },
     {
+        key: 1,
         title: "Resume",
         link: "/resume"
     },
      {
+        key: 2,
         title: "Blogs",
         link: "/blogs"
     },
      {
+        key: 3,
         title: "About Me",
         link: "/aboutMe"
     },
     {
+        key: 4,
         title: "Contact Me",
         link: "/contactMe"
     }
