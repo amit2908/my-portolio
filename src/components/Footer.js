@@ -26,9 +26,10 @@ const Footer = (props) => {
                         </div>
                         </a>
                     <a href="https://github.com/amit2908"><div className="Card box-shadow"><GitHub id="icon" /></div></a>
-                    <div className="Card box-shadow"><Facebook id="icon" /><a href="https://www.facebook.com/shubham.ojha.39"></a></div>
+                    <a href="https://www.facebook.com/shubham.ojha.39"><div className="Card box-shadow"><Facebook id="icon" /></div></a>
                 </div>
                 </div>
+                <br/><br/>
             <span className='copy-right'>© 2020 www.curious-coder.com</span>
        </div>
     );

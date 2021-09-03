@@ -6,8 +6,9 @@ export class Blogs extends Component {
             <div className='Centered-Items-Horizontally'>
             <div className='Compact-Page-Size'>
             <br/>
-            <br/>            
-<h1>Concurrency</h1>
+            <br/>   
+            <h1>To be Updated..</h1>                 
+{/* <h1>Concurrency</h1>
 <p>What is multithreading?</p>
 <p></p>
 <p>* Multithreading is a way of managing multiple tasks on the available threads in an efficient way so that the application remains seamless and responsive to the user.</p>
@@ -40,7 +41,7 @@ export class Blogs extends Component {
 <p></p>
 <p>A queue is a FIFO type data structure. Therefore the tasks added first to the queue will be dispatched first.</p>
 <p>Note that FIFO concept applies to only dispatching of the task and not to its execution.</p>
-<p></p>
+<p></p> */}
 
 
 

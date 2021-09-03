@@ -21,8 +21,11 @@ class AboutMe extends React.Component {
                
 
                <div style={{textAlign: 'center' }}>
-                   <span>I am self-motivated programmer. Love to code especially when I solve problems of others.</span><br/>
-                    <span>My favourite pass-time is product design, reading books and trekking mountains.</span><br/>
+                   <h2>Shubham Ojha</h2>
+                   <h3>Bachelor of Engineering (B.E) in "Computer Science" </h3>
+                   <h3>Currently Serving as "Senior iOS Developer" at Bajaj Finserv Markets.</h3><br/><br/>
+                   <span><i>I am self-motivated programmer. Love to code especially when I solve problems of others.<br/>
+                    My favourite pass-time is product design, reading books and trekking mountains.</i></span><br/>
                </div>
 
                <div style={styles.content}>
