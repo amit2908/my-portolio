@@ -34,7 +34,8 @@ const markets = {
     language: 'English',
     domain: 'Finance',
     appStoreLink: 'https://apps.apple.com/in/app/finserv-markets/id1482914241#?platform=iphone',
-    techStacks: ['iOS', 'Swift 5.0', 'Branch SDK', 'Adobe Analytics']
+    techStacks: ['iOS', 'Swift 5.0'],
+    integratedFeatures: ['3DTouch', 'Siri Shortcuts', 'HealthKit', 'Branch SDK', 'Adobe Analytics']
 }
 
 
@@ -45,7 +46,8 @@ const pey = {
     language: 'Hebrew',
     domain: 'Finance',
     appStoreLink: 'https://apps.apple.com/il/app/pey-wallet/id1473103150',
-    techStacks: ['iOS', 'Swift 4.2']
+    techStacks: ['iOS', 'Swift 4.2'],
+    integratedFeatures: ['RTL Localisation', 'Custom Keyboard']
 }
 
 const orgamax = {
@@ -55,7 +57,8 @@ const orgamax = {
     language: 'German',
     domain: 'Business Productivity/Finance',
     appStoreLink: 'https://itunes.apple.com/us/app/rechnung-in-1-minute-orgamax/id1434483537?ls=1&mt=8',
-    techStacks: ['iOS', 'Swift 4.2', 'Firebase Cloud Messaging', 'In-app Purchase']
+    techStacks: ['iOS', 'Swift 4.2'],
+    integratedFeatures: ['Firebase Cloud Messaging', 'In-app Purchase']
 }
 
 const hire = {

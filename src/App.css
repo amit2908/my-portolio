@@ -27,8 +27,6 @@
 }
 
 .App-header-link-bg {
-    margin: 0;
-    padding: 0;
     flex-direction: row;
     justify-content: space-between;
     display: flex;
@@ -56,20 +54,20 @@
 .Bubble-Out {
   background-color: white;
   color: #05386b;
-  /* transition-duration: 0.3s; */
   transform: scale3d(1.2, 1.2, 1.2);
-  /* border-color: black;
-  border-bottom-color:white ;
-  border-top-width: 1px;
-  border-right-width: 1px;
-  border-left-width: 1px;
-  border-bottom-width: 1px;
-  border-style: solid; */
   text-decoration: none;
   text-align: center;
   line-height: 64px;
   padding: 0 24px;
-  /* animation: menu-bubble-out alternate 1s cubic-bezier(0.19, 1, 0.22, 1);  */
+}
+
+.Bubble-Out-Sidebar {
+  background-color: white;
+  color: #05386b;
+  text-decoration: none;
+  text-align: center;
+  line-height: 64px;
+  padding: 0 24px;
 }
 
 a.App-header-link:hover {
@@ -211,7 +209,7 @@ a.App-header-link:not(:hover)  {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgb(25,25,25);
+  background-color: #5CDB95;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;

@@ -19,6 +19,7 @@ class Projects extends React.Component {
                         domain={R.string.trans.markets.domain}
                         appStoreLink={R.string.trans.markets.appStoreLink}
                         techStacks={R.string.trans.markets.techStacks}
+                        integratedFeatures={R.string.trans.markets.integratedFeatures}
                     />
                     <div className='Divider'></div>
                     <ProjectCard title={R.string.trans.pey.title}
@@ -31,6 +32,7 @@ class Projects extends React.Component {
                         domain={R.string.trans.pey.domain}
                         appStoreLink={R.string.trans.pey.appStoreLink}
                         techStacks={R.string.trans.pey.techStacks}
+                        integratedFeatures={R.string.trans.pey.integratedFeatures}
                     />
                     <div className='Divider'></div>
                     <ProjectCard title={R.string.trans.orgamax.title}
@@ -43,6 +45,7 @@ class Projects extends React.Component {
                         techStacks={R.string.trans.orgamax.techStacks}
                         logo={R.image.orgamax.logo}
                         client={R.string.trans.orgamax.client}
+                        integratedFeatures={R.string.trans.orgamax.integratedFeatures}
                     />
                 </div>
 

@@ -19,6 +19,8 @@ const ProjectCard = (props) => {
                 <span style={styles.primaryText}>Language: </span><span style={styles.secondaryText}>{props.language}</span><br />
                 <span style={styles.primaryText}>Technologies: </span>
                 <span style={styles.secondaryText}>{props.techStacks.reduce((x, y) => { return (x + ", " + y) })}</span><br />
+                <span style={styles.primaryText}>Features Integrated: </span>
+                <span style={styles.secondaryText}>{props.integratedFeatures.reduce((x, y) => { return (x + ", " + y) })}</span><br />
                 {props.domain &&
                     <span><span style={styles.primaryText}>Domain: </span><br /><span style={styles.secondaryText}>{props.domain}</span></span>}
                 <br />
@@ -46,6 +48,7 @@ ProjectCard.propTypes = {
     domain: PropTypes.string,
     appStoreLink: PropTypes.string,
     techStacks: PropTypes.arrayOf(String),
+    integratedFeatures: PropTypes.arrayOf(String),
     style: PropTypes.object
 }
 

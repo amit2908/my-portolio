@@ -24,6 +24,7 @@ class Root extends React.Component {
     handleMenuSelection = (index) => {
         window.sessionStorage.setItem('selectedMenuIndex', index);
         this.setState({index: parseInt(window.sessionStorage.getItem('selectedMenuIndex'))})
+        this.handleMenuButtonClick()
     }
 
     setAlertState = (show) => {
@@ -64,7 +65,7 @@ class Root extends React.Component {
                     />
                 </div>
                 {showAlert && 
-                <AlertCustom title='The site is under construction.' buttonTitle='OK' okAction={() => this.setAlertState(false) } />}
+                <AlertCustom title='The site is under development.' buttonTitle='OK' okAction={() => this.setAlertState(false) } />}
             </div>
         );
     }
