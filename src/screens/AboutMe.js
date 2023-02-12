@@ -92,7 +92,7 @@ const styles = {
     content: {
         padding: 30,
         display: 'flex',
-        flexDirection: 'column',
+        flexDirection: 'row',
         alignItems: 'left'
     },
     primaryText: {

@@ -14,9 +14,11 @@ const Footer = (props) => {
                         <div className="Card box-shadow"><Email id="icon" />
                         </div>
                     </a>
+                    <a href='tel:+918983061702'>
                     <div className="Card box-shadow">
-                        <SmartphoneIcon id="icon" />+918983061702 <br />+917389844740
+                        <SmartphoneIcon id="icon" />
                     </div>
+                    </a>
                     <a href="https://linkedin.com/in/shubhamojha2908/">
                         <div className="Card box-shadow"><LinkedInIcon id="icon" />
                         </div>
@@ -30,7 +32,7 @@ const Footer = (props) => {
                 </div>
                 </div>
                 <br/><br/>
-            <span className='copy-right'>© 2020 www.curious-coder.com</span>
+            <span className='copy-right'>©2022 www.curious-coder.com</span>
        </div>
     );
 }
