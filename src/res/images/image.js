@@ -1,3 +1,6 @@
+import pz1 from '../images/payzapp/1.png'
+import pz2 from '../images/payzapp/2.png'
+
 import peyScreen1 from '../images/pey/1.png'
 import peyScreen2 from '../images/pey/2.png'
 import peyLogo from '../images/pey/logo.png'
@@ -11,6 +14,12 @@ import markets2 from '../images/markets/MarketseStore.png'
 import marketsLogo from '../images/markets/logo.png'
 
 import dp from '../images/dp2.jpeg'
+
+const payzapp = {
+    screen1 : pz1,
+    screen2 : pz2,
+    logo    : peyLogo
+}
 
 const pey = {
     screen1 : peyScreen1,
@@ -35,6 +44,7 @@ const others = {
 }
 
 export default {
+    payzapp,
     pey,
     orgamax,
     dp,

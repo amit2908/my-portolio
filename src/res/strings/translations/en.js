@@ -27,12 +27,23 @@ const menus = [
     }
 ]
 
+const payzapp = {
+    title: 'Payzapp 2.0',
+    description: 'The new PayZapp gives you the choice to pay via UPI, Debit / Credit Cards and PayZapp Prepaid Wallet. You can Scan any QR or Swipe to Pay. With PayZapp you can Send/ Transfer Money to anyone, anywhere, any mobile number irrespective of the app they use. You can make recharges and bill payments across several categories like mobile (prepaid/ postpaid), DTH, Electricity etc. You can even shop in-app for travel (flight/hotel) or buy 200+ brand vouchers for online/offline shopping. Earn PayZapp Cashpoints and rewards on every transaction. Powered by HDFC Bank, PayZapp is 100% secure. Now with PayZapp, Pay your Way!',
+    client: 'Zeta Suite(AKA Directi)',
+    language: 'English',
+    domain: 'Payments and Security',
+    appStoreLink: 'https://apps.apple.com/in/app/payzapp-upi-payments/id6443480917',
+    techStacks: ['iOS', 'Swift 5.0','React Native', 'Objective-C', 'SwiftUI', 'Combine'],
+    integratedFeatures: ['Google Sign', 'Polling Mechanism', 'Moengage Analytics', 'Firebase Crashlytics', 'SDK Integration', 'CI CD Pipeline Integration']
+}
+
 const markets = {
     title: 'FINSERV MARKETS APP',
     description: 'The app provides users a central marketplace to buy physical products as well as soft products like insurances, loan, digital Gold, etc. It also allows users to transfer payments between contacts, make payments to businesses, initiate money requests from others and more. ',
     client: 'Bajaj Finserv Direct Limited',
     language: 'English',
-    domain: 'Finance',
+    domain: 'Payments and Insurance',
     appStoreLink: 'https://apps.apple.com/in/app/finserv-markets/id1482914241#?platform=iphone',
     techStacks: ['iOS', 'Swift 5.0'],
     integratedFeatures: ['3DTouch', 'Siri Shortcuts', 'HealthKit', 'Branch SDK', 'Fisdom SDK', 'Adobe Analytics', 'Dark Mode Support', 'Neumorphic Design(for Login Module)']
@@ -44,7 +55,7 @@ const pey = {
     description: 'The wallet allows users to transfer payments between contacts, make payments to businesses, initiate money requests from others and more. Parents can use it to invite their children to use their wallet and set restrictions on children\'s transactions.',
     client: 'Hold Me Ltd (Israel)',
     language: 'Hebrew',
-    domain: 'Finance',
+    domain: 'Payments',
     appStoreLink: 'https://apps.apple.com/il/app/pey-wallet/id1473103150',
     techStacks: ['iOS', 'Swift 4.2'],
     integratedFeatures: ['RTL Localisation', 'Custom Keyboard']
@@ -143,6 +154,7 @@ const favouriteBooks = [
 ]
 
 export default {
+    payzapp,
     markets,
     pey,
     orgamax,

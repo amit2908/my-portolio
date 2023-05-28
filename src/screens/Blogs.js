@@ -1,55 +1,101 @@
+import { border, fontWeight } from '@material-ui/system'
 import React, { Component } from 'react'
+// import { Document, Page, Text, View, StyleSheet, Rect } from '@react-pdf/renderer';
+// import { PDFViewer } from '@react-pdf/renderer';
+// const fs = require('fs');
 
-export class Blogs extends Component {
+// Create Document Component
+// const TD = (content) => (
+//         <View style={styles.td}>
+//             <Text>{content}</Text>
+//         </View>
+// );
+
+
+// // Create Document Component
+// const TH = (title) => (
+//         <View style={styles.header}>
+//             <Text>{title}</Text>
+//         </View>
+// );
+
+
+// // Create Document Component
+// const TR = () => (
+//         <View style={styles.header}>
+//             <TH>Header 1</TH>
+//         </View>
+// );
+
+// // Create Document Component
+// const Table = () => (
+//         <View style={styles.section}>
+//             <TR />
+//         </View>
+// );
+
+// // Create Document Component
+// const MyDocument = () => (
+//     <Document>
+//     <Page size="A4" style={styles.page}>
+//         <Table style={styles.table} />
+//     </Page>
+//     </Document>
+// );
+
+class Blogs extends Component {
+    
+    createPage(){
+        // const doc = new PDFDocument({size: 'A7'});
+        //  doc.addPage({size: 'A7'});
+    }
+
     render() {
+        // this.createPage = this.createPage.bind(this)
         return (
             <div className='Centered-Items-Horizontally'>
             <div className='Compact-Page-Size'>
             <br/>
-            <br/>   
-            <h1>To be Updated..</h1>                 
-{/* <h1>Concurrency</h1>
-<p>What is multithreading?</p>
-<p></p>
-<p>* Multithreading is a way of managing multiple tasks on the available threads in an efficient way so that the application remains seamless and responsive to the user.</p>
-<br/>
-<p></p>
-<p>What is a thread?</p>
-<p></p>
-<p>A thread is a path of execution within a process. A process can contain multiple threads.</p>
-<br/>
-<p>What is a process?</p>
-<p></p>
-<p>A process is an instance of a computer program. In simple terms, any executing program is known as a process.</p>
-<p>A process can use multiple threads to complete a tasks mentioned in its program.</p>
-<br/>
-<p></p>
-<p>Difference between a thread and a process</p>
-<p></p>
-<p>A thread is a lightweight process. Multiple threads can share same memory within a process. While multiple processes doesn’t share memory with each other.</p>
-<p></p>
-<br/>
-<p>Multithreading in iOS</p>
-<p></p>
-<p>iOS provides two APIs to achieve multithreading.</p>
-<p>1. GCD (Grand Central Dispatch):  is a low-level api and is an implementation of libDispatch library.</p>
-<p>2. NSOperationQueue: is built on top of GCD which provides an object oriented approach to achieve multithreading.</p>
-<p></p>
-<p>Generally, there are two types of queues:</p>
-<p>1. Serial Queue</p>
-<p>2. Concurrent Queue</p>
-<p></p>
-<p>A queue is a FIFO type data structure. Therefore the tasks added first to the queue will be dispatched first.</p>
-<p>Note that FIFO concept applies to only dispatching of the task and not to its execution.</p>
-<p></p> */}
-
-
-
-
+            {/* <PDFViewer><MyDocument></MyDocument></PDFViewer> */}
             </div>
+            <button style={styles.button} onClick={this.createPage}>Generate PDF</button>
             </div>
         )
     }
 }
 
+
+
 export default Blogs
+
+const styles = {
+   table: {
+    backgroundColor: '#DCFFFF',
+    border : "solid 1px black",
+    padding : 10,
+    margin : 30,
+    width: '100%',
+    borderRadius: 10
+   },
+   button: {
+    padding: 16,
+    marginBottom: 10,
+    borderRadius: 10
+   },
+   page: {
+    flexDirection: 'row',
+    backgroundColor: '#fff'
+  },
+  table: {
+    margin: 10,
+    padding: 10,
+    flexGrow: 1
+  },
+  header: {
+    padding: 10,
+    fontWeight: 'bold'
+  },
+  td: {
+    padding: 10
+  }
+}

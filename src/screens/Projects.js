@@ -9,6 +9,19 @@ class Projects extends React.Component {
             <div className="Centered-Items-Horizontally">
 
                 <div className='Compact-Page-Size'>
+                    <ProjectCard title={R.string.trans.payzapp.title}
+                        description={R.string.trans.payzapp.description}
+                        screen1={R.image.payzapp.screen1}
+                        screen2={R.image.payzapp.screen2}
+                        logo={R.image.payzapp.logo}
+                        client={R.string.trans.payzapp.client}
+                        language={R.string.trans.payzapp.language}
+                        domain={R.string.trans.payzapp.domain}
+                        appStoreLink={R.string.trans.payzapp.appStoreLink}
+                        techStacks={R.string.trans.payzapp.techStacks}
+                        integratedFeatures={R.string.trans.payzapp.integratedFeatures}
+                    />
+                    <div className='Divider'></div>
                     <ProjectCard title={R.string.trans.markets.title}
                         description={R.string.trans.markets.description}
                         screen1={R.image.markets.screen1}
