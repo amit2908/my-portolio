@@ -12,13 +12,14 @@ import orgamaxLogo from '../images/orgamax/logo.png'
 import markets1 from '../images/markets/MarketsHome.png'
 import markets2 from '../images/markets/MarketseStore.png'
 import marketsLogo from '../images/markets/logo.png'
+import pzLogo from '../images/payzapp/pzAppIcon.webp'
 
 import dp from '../images/dp2.jpeg'
 
 const payzapp = {
     screen1 : pz1,
     screen2 : pz2,
-    logo    : peyLogo
+    logo    : pzLogo
 }
 
 const pey = {
