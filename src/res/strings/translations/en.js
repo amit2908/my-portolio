@@ -11,11 +11,6 @@ const menus = [
         link: "/resume"
     },
      {
-        key: 2,
-        title: "Blogs",
-        link: "/blogs"
-    },
-     {
         key: 3,
         title: "About Me",
         link: "/aboutMe"

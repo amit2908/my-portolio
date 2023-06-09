@@ -32,7 +32,7 @@ const Footer = (props) => {
                 </div>
                 </div>
                 <br/><br/>
-            <span className='copy-right'>©2022 www.curious-coder.com</span>
+            <span className='copy-right'>©2023 www.curious-coder.com</span>
        </div>
     );
 }
