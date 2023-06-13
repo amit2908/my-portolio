@@ -1,40 +1,80 @@
 import React from 'react';
 import AppleIcon from '@material-ui/icons/Apple';
 import PropTypes from 'prop-types'
+import { largeTitle } from '../styles/styles';
+import { Component } from 'react';
+import zIndex from '@material-ui/core/styles/zIndex';
 
-const ProjectCard = (props) => {
-    return (
-        <div className='Project-card' style={props.style}>
-            <div className='Project-card-image-view'>
-                <img src={props.screen1} alt='' className="Project-card-image" />
-                <img src={props.screen2} alt='' className="Project-card-image" />
-            </div>
-            <div className="Project-card-description">
-                <div className='Project-card-title'>
-                    <img src={props.logo} alt='' style={styles.logo} />
-                    {props.title}
+class ProjectCard extends Component {
+
+    constructor(props){
+        super(props)
+        this.props = props
+        this.state = {
+            rotationX: 10,
+            rotationY: 30,
+            rotationZ: 30,
+            zIndexImg: -1
+        }
+    }
+
+    rotate = () => {
+        this.setState({
+            rotationX: 0,
+            rotationY: 0,
+            rotationZ: 0,
+            zIndexImg: 0
+        })
+    }
+
+    reset = () => {
+        this.setState({
+            rotationX: 30,
+            rotationY: 30,
+            rotationZ: 30,
+            zIndexImg: 0
+        })
+    }
+
+    render(){
+        const props = this.props
+        const { rotationX, rotationY, rotationZ, zIndexImg } = this.state
+        return (
+            <div className='Project-card' style={props.style}>
+                <div className='Project-card-image-view'>
+                    <img src={props.screen1} alt='' className="Project-card-image" />  {/* onMouseOver={() => this.rotate()} style={{tranform: `rotate(${rotationX}deg)`}} /> */}
+                    <img src={props.screen2} alt='' className="Project-card-image" 
+                    onMouseOver={() => this.rotate()} style={{transform: `rotateZ(${rotationX}deg)`, zIndex: zIndexImg}}
+                    onMouseOut={() => this.reset()}
+                    />
                 </div>
-                <span style={styles.secondaryText}>{props.description}</span><br />
-                <span style={styles.primaryText}>Client: </span><span style={styles.secondaryText}>{props.client}</span><br />
-                <span style={styles.primaryText}>Language: </span><span style={styles.secondaryText}>{props.language}</span><br />
-                <span style={styles.primaryText}>Technologies: </span>
-                <span style={styles.secondaryText}>{props.techStacks.reduce((x, y) => { return (x + ", " + y) })}</span><br />
-                <span style={styles.primaryText}>Features Integrated: </span>
-                <span style={styles.secondaryText}>{props.integratedFeatures.reduce((x, y) => { return (x + ", " + y) })}</span><br />
-                {props.domain &&
-                    <span><span style={styles.primaryText}>Domain: </span><br /><span style={styles.secondaryText}>{props.domain}</span></span>}
-                <br />
-                {props.appStoreLink &&
-                    <span style={{ alignItems: 'center', justifyContent: 'space-between', flexDirection: 'row' }, styles.secondaryText}>
-                        <AppleIcon />
-                        <a className='no-decoration-link' href={props.appStoreLink}>
-                            View App on AppStore
-                        </a>
-                    </span>
-                }
+                <div className="Project-card-description">
+                    <div className='Project-card-title'>
+                        <img src={props.logo} alt='' style={styles.logo} />
+                        <span style={largeTitle}>{props.title}</span>
+                    </div>
+                    <span style={styles.secondaryText}>{props.description}</span><br />
+                    <span style={styles.primaryText}>Client: </span><span style={styles.secondaryText}>{props.client}</span><br />
+                    <span style={styles.primaryText}>Language: </span><span style={styles.secondaryText}>{props.language}</span><br />
+                    <span style={styles.primaryText}>Technologies: </span>
+                    <span style={styles.secondaryText}>{props.techStacks.reduce((x, y) => { return (x + ", " + y) })}</span><br />
+                    <span style={styles.primaryText}>Features Integrated: </span>
+                    <span style={styles.secondaryText}>{props.integratedFeatures.reduce((x, y) => { return (x + ", " + y) })}</span><br />
+                    {props.domain &&
+                        <span><span style={styles.primaryText}>Domain: </span><br /><span style={styles.secondaryText}>{props.domain}</span></span>}
+                    <br />
+                    {props.appStoreLink &&
+                        <span style={{ alignItems: 'center', justifyContent: 'space-between', flexDirection: 'row', ...styles.secondaryText}}>
+                            <AppleIcon />
+                            <a className='no-decoration-link' href={props.appStoreLink}>
+                                View App on AppStore
+                            </a>
+                        </span>
+                    }
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
 
 ProjectCard.propTypes = {
@@ -60,7 +100,15 @@ const styles = {
     secondaryText: {
         color: '#212121'
     },
-    logo: { margin: '7px', width: '40px', height: '40px' }
+    logo: { 
+    marginRight: '10px', 
+    width: '100px', 
+    height: '100px',
+    borderStyle: 'solid',
+    borderWidth: '1px',
+    borderRadius: '22px',
+    borderColor: 'gray' 
+ }
 }
 
 export default ProjectCard;

@@ -52,8 +52,13 @@ const ArrangeChildrenVertically = styled.div`
     align-items: center;
     justify-content: space-between;
 `
+const largeTitle = {
+    fontSize: 35,
+    fontFamily: 'raleway-bold'
+}
 
 export {
+    largeTitle,
     Overlay,
     Alert,
     AlertButton,

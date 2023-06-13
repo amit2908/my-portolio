@@ -38,7 +38,6 @@ class SideBar extends React.Component{
 }
 
 SideBar.propTypes = {
-    handleMenuButtonClick: PropTypes.func.isRequired,
     title: PropTypes.string,
     selectedIndex: PropTypes.number.isRequired,
     handleMenuSelection: PropTypes.func.isRequired

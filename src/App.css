@@ -4,6 +4,11 @@
   }
 }
 
+@font-face {
+  font-family: 'raleway-bold';
+  src: url('./res/fonts/Raleway-Bold.ttf');
+}
+
 .App-header-bg {
   flex: auto;
   display: flex;
@@ -86,7 +91,8 @@ a.App-header-link:not(:hover)  {
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  font-family: 'advanced-sans-serif';
+  font-family: 'Raleway-Bold';
+  font-weight: bold;
   color: #05386b;
 }
 
@@ -301,11 +307,10 @@ a:link {
 
 
 .Project-card-title {  
-  margin: 20px;
+  margin-bottom: 20px;
   font-weight: bold; 
   display: flex; 
   align-items: center; 
-  justify-content: center
 }
 
 
@@ -316,7 +321,7 @@ a:link {
 }
 
 .Project-card-image {
-  margin: 10px;
+  margin: 15px;
   width: 200px;
 }
 img.Project-card-image {

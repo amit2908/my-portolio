@@ -34,7 +34,7 @@ const payzapp = {
 }
 
 const markets = {
-    title: 'FINSERV MARKETS APP',
+    title: 'Finserv Markets app',
     description: 'The app provides users a central marketplace to buy physical products as well as soft products like insurances, loan, digital Gold, etc. It also allows users to transfer payments between contacts, make payments to businesses, initiate money requests from others and more. ',
     client: 'Bajaj Finserv Direct Limited',
     language: 'English',
@@ -46,7 +46,7 @@ const markets = {
 
 
 const pey = {
-    title: 'PEY MOBILE APP',
+    title: 'Pey mobile app',
     description: 'The wallet allows users to transfer payments between contacts, make payments to businesses, initiate money requests from others and more. Parents can use it to invite their children to use their wallet and set restrictions on children\'s transactions.',
     client: 'Hold Me Ltd (Israel)',
     language: 'Hebrew',
@@ -57,7 +57,7 @@ const pey = {
 }
 
 const orgamax = {
-    title: 'ORGAMAX',
+    title: 'Orgamax',
     description: 'A productivity application that helps users to create workflows and assign them to their teams. Users can track the task progress using this application.',
     client: 'Deltra Business Solutions',
     language: 'German',
@@ -118,6 +118,13 @@ const techBooks = [
         description: "",
         link: "",
         writer: "Martin Fowler"
+    },
+
+    {
+        title: "Clean Architecture",
+        description: "",
+        link: "",
+        writer: "Robert C. Martin"
     }
 ]
 
@@ -148,6 +155,39 @@ const favouriteBooks = [
     }
 ]
 
+const favouriteShows = [
+    {
+        title: "Mahabharata",
+        description: "",
+        link: "",
+        writer: ""
+    },
+    {
+        title: "Flash",
+        description: "",
+        link: "",
+        writer: ""
+    },
+    {
+        title: "The Arrow",
+        description: "",
+        link: "",
+        writer: ""
+    },
+    {
+        title: "Friends",
+        description: "",
+        link: "",
+        writer: ""
+    },
+    {
+        title: "Chanakya",
+        description: "",
+        link: "",
+        writer: ""
+    }
+]
+
 export default {
     payzapp,
     markets,
@@ -158,5 +198,6 @@ export default {
     rawTitles,
     favouriteBlogs,
     favouriteBooks,
+    favouriteShows,
     techBooks
 }

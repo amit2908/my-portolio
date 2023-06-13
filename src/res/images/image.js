@@ -5,8 +5,8 @@ import peyScreen1 from '../images/pey/1.png'
 import peyScreen2 from '../images/pey/2.png'
 import peyLogo from '../images/pey/logo.png'
 
-import orgamax1 from '../images/orgamax/1.jpg'
-import orgamax2 from '../images/orgamax/2.jpg'
+import orgamax1 from '../images/orgamax/1.png'
+import orgamax2 from '../images/orgamax/2.png'
 import orgamaxLogo from '../images/orgamax/logo.png'
 
 import markets1 from '../images/markets/MarketsHome.png'

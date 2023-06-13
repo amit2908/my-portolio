@@ -7,7 +7,13 @@ const introduction = () => (<div style={{ textAlign: 'center' }}>
                             <h3>Bachelor of Engineering (B.E) in "Computer Science" </h3>
                             <h3>Currently Serving as "Senior Staff Engineer" at Altimetrik India.</h3><br /><br />
                             <span><i>I am self-motivated programmer. Love to code especially when I solve problems of others.<br />
-                                My favourite pass-time is product design, reading books and trekking mountains.</i></span><br />
+                                My favourite pass-time is product design, reading books and trekking mountains.<br/>
+                                Open source fan. Dark theme lover. Animation geek.<br/>
+                                </i></span><br />
+                            <span><i>Whenever I feel bored, I watch sci-fi movies. I am fan of the Arrow series.<br/><br/>
+                                    My strength - Perseverance and Empathy<br/>
+                                    My weakness - Will let you know personally. 
+                                </i></span><br />
                         </div>)
 
 const blogs = () => (
@@ -60,6 +66,25 @@ const blogs = () => (
                                 })}
                             </div>)
 
+const favouriteShows = () => (
+    <div style={styles.card}>
+                                <span style={styles.primaryText}>Favourite Shows</span><br />
+                                {R.string.trans.favouriteShows.map(function (book, i) {
+                                    if (book.link) {
+                                        return (<p className='link'><a className='boxed-link' href={book.link}>
+                                            <span style={styles.secondaryText}>{book.title}<br /></span>
+                                            {/* <span style={styles.author}>{"— " + book.writer}<br /></span> */}
+                                        </a></p>)
+                                    } else {
+                                        return (<p>
+                                            <span style={styles.secondaryText}>{book.title}<br /></span>
+                                            {/* <span style={styles.author}>{"— " + book.writer}<br /></span> */}
+                                        </p>)
+                                    }
+
+                                })}
+                            </div>)
+
 
 class AboutMe extends React.Component {
 
@@ -85,7 +110,7 @@ class AboutMe extends React.Component {
                             <br />
                             {motivationBooks()}
                             <br />
-
+                            {favouriteShows()}
                         </div>
                     </div>
                 </div>
@@ -106,9 +131,7 @@ const styles = {
     },
     card: { 
         padding: 20,
-        margin: 10,
-        backgroundColor: 'green',
-        borderRadius: 10
+        margin: 10
     },
     primaryText: {
         fontSize: 18,
