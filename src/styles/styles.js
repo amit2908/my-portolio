@@ -53,7 +53,7 @@ const ArrangeChildrenVertically = styled.div`
     justify-content: space-between;
 `
 const largeTitle = {
-    fontSize: 35,
+    fontSize: 25,
     fontFamily: 'raleway-bold'
 }
 
