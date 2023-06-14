@@ -9,6 +9,16 @@
   src: url('./res/fonts/Raleway-Bold.ttf');
 }
 
+@font-face {
+  font-family: 'raleway-regular';
+  src: url('./res/fonts/Raleway-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'raleway-medium';
+  src: url('./res/fonts/Raleway-Medium.ttf');
+}
+
 .App-header-bg {
   flex: auto;
   display: flex;
@@ -36,7 +46,7 @@
     justify-content: space-between;
     display: flex;
     font-size: calc(5px + 1vmin);
-    font-family: 'highlandLight';
+    font-family: 'raleway-medium';
 }
 
 .App-header-link {
@@ -222,33 +232,6 @@ a.App-header-link:not(:hover)  {
   color: white;
 }
 
-.SideBar-link-bg {
-  margin: 0;
-  padding: 0;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  font-size: calc(5px + 1vmin);
-  font-family: 'highlandLight';
-  width: 100%;
-  color: white;
-}
-
-.SideBar-link-bg-selected {
-  margin: 0;
-  padding: 0;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  font-size: calc(5px + 1vmin);
-  font-family: 'highlandLight';
-  width: 100%;
-  color: darkblue;
-  background-color: greenyellow;
-}
-
 .SideBar-link {
     display: block;
     color: white;
@@ -301,7 +284,7 @@ a:link {
   justify-content: flex-start;
   margin: 20px;
   /* width: fit-content; */
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana;
   font-size: calc(10px + 1vmin);
 }
 

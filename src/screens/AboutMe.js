@@ -103,7 +103,6 @@ class AboutMe extends React.Component {
                         {introduction()}
 
                         <div style={styles.content}>
-                            
                             {blogs()}
                             <br />
                             {techBooks()}
