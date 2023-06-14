@@ -48,7 +48,7 @@ class ProjectCard extends Component {
                     onMouseOut={() => this.reset()}
                     />
                 </div>
-                <div className="Project-card-description">
+                <div className="Project-card-description DescriptionText">
                     <div className='Project-card-title'>
                         <img src={props.logo} alt='' style={styles.logo} />
                         <span style={largeTitle}>{props.title}</span>
