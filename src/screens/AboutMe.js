@@ -98,11 +98,11 @@ class AboutMe extends React.Component {
             <div className="Centered-Items-Horizontally" style={styles.darkBackground}>
                 <div className='Compact-Page-Size'>
                     <div className="Centered-Items-Horizontally" style={styles.darkBackground}>
-                        <img src={R.image.dp} alt='' id='profile-picture' width='150px' height='150px' />
+                        <img src={R.image.dp} alt='' style={{width:150, height:150, marginTop: 50}} id='profile-picture'  />
 
                         {introduction()}
 
-                        <div style={styles.content}>
+                        <div className='Responsive-Horizontal-Card-Alignment' style={styles.content}>
                             {blogs()}
                             <br />
                             {techBooks()}
@@ -124,9 +124,6 @@ export default AboutMe;
 const styles = {
     content: {
         padding: 30,
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'left'
     },
     card: { 
         padding: 20,

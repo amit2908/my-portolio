@@ -3,22 +3,26 @@ const menus = [
      {
         key: 0,
         title: "My Works",
-        link: "/projects"
+        link: "/projects",
+        icon: 'trophy'
     },
     {
         key: 1,
         title: "Resume",
-        link: "/resume"
+        link: "/resume",
+        icon: 'file-arrow-down'
     },
      {
         key: 3,
         title: "About Me",
-        link: "/aboutMe"
+        link: "/aboutMe",
+        icon: 'user'
     },
     {
         key: 4,
         title: "Contact Me",
-        link: "/contactMe"
+        link: "/contactMe",
+        icon: 'phone'
     }
 ]
 

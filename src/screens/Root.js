@@ -2,7 +2,6 @@ import React from 'react';
 import Header from '../components/Header';
 import SideBar from '../components/SideBar';
 import AlertCustom from '../components/Alert';
-// import R from '../res/index'
 
 class Root extends React.Component {
 
@@ -64,8 +63,8 @@ class Root extends React.Component {
                         style={this.state.sideBarHidden ? { width: 0 } : { width: 250 }}
                     />
                 </div>
-                {showAlert && 
-                <AlertCustom title='The site is under development.' buttonTitle='OK' okAction={() => this.setAlertState(false) } />}
+                {/* {showAlert && 
+                <AlertCustom title='The site is under development.' buttonTitle='OK' okAction={() => this.setAlertState(false) } />} */}
             </div>
         );
     }
