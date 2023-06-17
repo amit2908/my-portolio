@@ -11,23 +11,26 @@ type WorkExperience = {
 function WorkExperienceCard(props: { workExperience: WorkExperience}) {
     const { workExperience } = props;
   return (
-    <div>
+    <div className='bordered standard-padding standard-margin-vertical'>
       <div className="EndToEnd">
         <div>
-          <b>{workExperience.name}</b>,&nbsp;
+          <h3>{workExperience.name}</h3>
           {workExperience.designation}
         </div>
         <div>
-            <b>{workExperience.fromDate}</b>-
-            <b>{!workExperience.toDate || workExperience.toDate === '' ? 'Current' : workExperience.toDate}</b>
+        <h3>{workExperience.fromDate}-
+            {!workExperience.toDate || workExperience.toDate === '' ? 'Current' : workExperience.toDate}</h3>
           </div>
       </div>
       <div>
-        <ul>{workExperience.accomplishments.map((item, index) => (<li key={index}>{item}</li>))}</ul>
+        <br/><br/>
+        <b><i>Accomplishments:</i></b>
+        <ul>{workExperience.accomplishments.map((item, index) => (<li key={index} style={{paddingBottom: 5}}>{item}</li>))}</ul>
       </div>
     </div>
   );
 }
 
 export default WorkExperienceCard
-export { WorkExperienceCard, WorkExperience }
+export { WorkExperienceCard }
+export type { WorkExperience }

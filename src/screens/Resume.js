@@ -8,7 +8,7 @@ import WorkExperienceList from '../components/WorkExperienceList';
 import { EducationCardList } from '../components/EducationCard';
 import DownloadButton from '../components/DownloadButton';
 import { DoubleArrow } from '@material-ui/icons';
-import { IconButton } from '@material-ui/core';
+import { IconButton, Button } from '@material-ui/core';
 
 function Resume() {
   const [expand, setExpand] = useState(Array(13).fill(true));
@@ -30,21 +30,44 @@ function Resume() {
     return (
       <div className="Centered-Items-Veritically">
         <div className="Centered-Items-Horizontally">
-          <DownloadButton link={resumeLink} />
-          <IconButton style={{marginTop: 20, transform: expand.reduce((acc, v) => (acc && v)) ? 'rotate(90deg)' : 'rotate(0deg)' }} onClick={expandAll}>
-                <DoubleArrow />
-              </IconButton> 
+          <div className="EndToEnd standard-margin">
+            <DownloadButton link={resumeLink} />
+            <div
+              className="App-button CenterAlign standard-margin-left"
+              onClick={expandAll}
+            >
+              <DoubleArrow
+                style={{
+                  transform: expand.reduce((acc, v) => acc && v)
+                    ? "rotate(90deg)"
+                    : "rotate(0deg)",
+                }}
+              />
+              {expand.reduce((acc, v) => acc && v) ? "Hide" : "Show All"}
+            </div>
+          </div>
+
           <div className="Compact-Page-Size" style={{ marginTop: 20 }}>
             <Container
               title={"Profile Summary"}
               Content={
-                <ProfileSummary
-                  summary={summary}
-                  showDetail={expand[0]}
-                />
+                <ProfileSummary summary={summary} showDetail={expand[0]} />
               }
               expanded={expand[0]}
               index={0}
+              handleExpandClick={handleExpandClick}
+            />
+
+            <Container
+              title={"Work Experience"}
+              Content={
+                <WorkExperienceList
+                  experiences={workExperience}
+                  showDetail={expand[10]}
+                />
+              }
+              expanded={expand[10]}
+              index={10}
               handleExpandClick={handleExpandClick}
             />
 
@@ -62,7 +85,7 @@ function Resume() {
             />
 
             <Container
-            title="UI Frameworks"
+              title="UI Frameworks"
               Content={
                 <RatingCardList
                   list={skills.uiFrameworks}
@@ -76,12 +99,7 @@ function Resume() {
 
             <Container
               title={"Architectures"}
-              Content={
-                <ChipCard
-                  cards={skills.arch}
-                  showDetail={expand[3]}
-                />
-              }
+              Content={<ChipCard cards={skills.arch} showDetail={expand[3]} />}
               expanded={expand[3]}
               index={3}
               handleExpandClick={handleExpandClick}
@@ -90,10 +108,7 @@ function Resume() {
             <Container
               title={"Databases"}
               Content={
-                <ChipCard
-                  cards={skills.database}
-                  showDetail={expand[4]}
-                />
+                <ChipCard cards={skills.database} showDetail={expand[4]} />
               }
               expanded={expand[4]}
               index={4}
@@ -102,12 +117,7 @@ function Resume() {
 
             <Container
               title={"Primary Tools"}
-              Content={
-                <ChipCard
-                  cards={skills.tools}
-                  showDetail={expand[5]}
-                />
-              }
+              Content={<ChipCard cards={skills.tools} showDetail={expand[5]} />}
               expanded={expand[5]}
               index={5}
               handleExpandClick={handleExpandClick}
@@ -116,10 +126,7 @@ function Resume() {
             <Container
               title={"Analytics Tools"}
               Content={
-                <ChipCard
-                  cards={skills.analyticTools}
-                  showDetail={expand[6]}
-                />
+                <ChipCard cards={skills.analyticTools} showDetail={expand[6]} />
               }
               expanded={expand[6]}
               index={6}
@@ -142,10 +149,7 @@ function Resume() {
             <Container
               title={"SDKs and Libraries"}
               Content={
-                <ChipCard
-                  cards={skills.otherLibs}
-                  showDetail={expand[8]}
-                />
+                <ChipCard cards={skills.otherLibs} showDetail={expand[8]} />
               }
               expanded={expand[8]}
               index={8}
@@ -155,10 +159,7 @@ function Resume() {
             <Container
               title={"Other Skills"}
               Content={
-                <ChipCard
-                  cards={skills.otherSkills}
-                  showDetail={expand[9]}
-                />
+                <ChipCard cards={skills.otherSkills} showDetail={expand[9]} />
               }
               expanded={expand[9]}
               index={9}
@@ -166,15 +167,10 @@ function Resume() {
             />
 
             <Container
-              title={"Work Experience"}
-              Content={
-                <WorkExperienceList
-                  experiences={workExperience}
-                  showDetail={expand[10]}
-                />
-              }
-              expanded={expand[10]}
-              index={10}
+              title={"Interests"}
+              Content={<ChipCard cards={interests} showDetail={expand[12]} />}
+              expanded={expand[12]}
+              index={12}
               handleExpandClick={handleExpandClick}
             />
 
@@ -191,22 +187,11 @@ function Resume() {
               handleExpandClick={handleExpandClick}
             />
 
-            <Container
-              title={"Interests"}
-              Content={
-                <ChipCard
-                  cards={interests}
-                  showDetail={expand[12]}
-                />
-              }
-              expanded={expand[12]}
-              index={12}
-              handleExpandClick={handleExpandClick}
-            />
-
             {/* <embed style={{ backgroundColor: 'white' }} src={resumeLink} width="800px" height="1110px" /> */}
           </div>
-          <DownloadButton link={resumeLink} />
+          <div className="standard-margin-vertical">
+            <DownloadButton link={resumeLink} />
+          </div>
         </div>
       </div>
     );
@@ -215,13 +200,13 @@ function Resume() {
 function Container({ title, Content, handleExpandClick, index, expanded }) {
   return (
     <div>
-      <div className='Leading-Row' style={{marginTop: 20}}>
-              <IconButton style={{marginTop: 20, transform: expanded ? 'rotate(90deg)' : 'rotate(0deg)' }} onClick={() => handleExpandClick({ index: index })}>
+      <div className='Leading-Row CenterAlign standard-margin-top'>
+              <IconButton style={{transform: expanded ? 'rotate(90deg)' : 'rotate(0deg)' }} onClick={() => handleExpandClick({ index: index })}>
                 <DoubleArrow />
               </IconButton> 
               <h1>{title}</h1>
       </div>
-      <div style={{marginLeft: 50}}>{Content}</div>
+      <div style={{marginLeft: 45}}>{Content}</div>
        </div>
   )
 }

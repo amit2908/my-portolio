@@ -7,6 +7,7 @@ function RatingCardList({ list, showDetail }) {
     <div>
       {showDetail && (
         <div
+        className='bordered standard-padding standard-margin'
           style={{
             display: "flex",
             flexDirection: "column",

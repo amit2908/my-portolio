@@ -11,8 +11,7 @@ type Education = {
 function EducationCard(props: {educationItem: Education}) {
     const { educationItem }  = props;
   return (
-    <div style={{marginTop: 20}}>
-      <div className='EndToEnd'>
+      <div className='EndToEnd Wrap bordered standard-padding standard-margin-vertical'>
         <div className="Leading-Col">
           <b>{educationItem.institutionName}</b>
           {educationItem.degree}
@@ -22,7 +21,6 @@ function EducationCard(props: {educationItem: Education}) {
         <b>{`${educationItem.fromDate}-${educationItem.toDate}`}</b>
         </div>
       </div>
-    </div>
   );
 }
 

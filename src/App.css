@@ -161,11 +161,18 @@ a.App-header-link:not(:hover)  {
   justify-content: center;
 }
 
+.CenterJustifyItems {
+  justify-items: center;
+}
+
 .EndToEnd{
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.Wrap {
+  flex-wrap: wrap;
 }
 
 .Leading-Col {
@@ -174,17 +181,23 @@ a.App-header-link:not(:hover)  {
   justify-items: flex-start;
 }
 
-.Leading-Row {
-  display: flex;
-  flex-direction: row;
-  justify-items: flex-start;
-  align-items: flex-start;
-}
-
 .Trailing-Col {
   display: flex;
   flex-direction: column;
   justify-items: flex-end;
+}
+
+.Leading-Row {
+  display: flex;
+  flex-direction: row;
+  justify-items: flex-start;
+}
+
+.Trailing-Row {
+  display: flex;
+  flex-direction: row;
+  justify-items: flex-start;
+  align-items: flex-end;
 }
 
 .Width70Percent {
@@ -212,6 +225,13 @@ a.App-header-link:not(:hover)  {
   border-radius: 10px;
 }
 
+.bordered {
+  border-width: 1px;
+  border-style: inset;
+  border-color: black;
+  border-radius: 10px;
+}
+
 .standard-padding {
   padding: 10px;
 }
@@ -220,6 +240,31 @@ a.App-header-link:not(:hover)  {
   margin: 20px;
 }
 
+.standard-margin-vertical {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.standard-margin-horizontal {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.standard-margin-left {
+  margin-left: 20px;
+}
+
+.standard-margin-right {
+  margin-right: 20px;
+}
+
+.standard-margin-top {
+  margin-top: 20px;
+}
+
+.standard-margin-botton {
+  margin-bottom: 20px;
+}
 
 .Card {
   display: flex;
@@ -268,12 +313,8 @@ a.App-header-link:not(:hover)  {
   flex-direction: row;
   flex-wrap: wrap;
   background-color: white;
-  border-width: 1px;
-  border-style: inset;
-  border-color: black;
-  border-radius: 20px;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   justify-items: center;
 }
 
@@ -289,7 +330,7 @@ a.App-header-link:not(:hover)  {
   align-items: center;
   justify-content: center;
   justify-items: center;
-  margin: 10px;
+  margin: 5px;
 }
 
 .box-shadow {
