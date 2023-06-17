@@ -31,7 +31,7 @@ function Resume() {
       <div className="Centered-Items-Veritically">
         <div className="Centered-Items-Horizontally">
           <DownloadButton link={resumeLink} />
-          <IconButton style={{marginTop: 20transform: expand.reduce((acc, v) => (acc && v)) ? 'rotate(90deg)' : 'rotate(0deg)' }} onClick={expandAll}>
+          <IconButton style={{marginTop: 20, transform: expand.reduce((acc, v) => (acc && v)) ? 'rotate(90deg)' : 'rotate(0deg)' }} onClick={expandAll}>
                 <DoubleArrow />
               </IconButton> 
           <div className="Compact-Page-Size" style={{ marginTop: 20 }}>
