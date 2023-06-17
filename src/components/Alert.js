@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { Alert, AlertButton, ArrangeChildrenVertically, CenterChildrenHorizontally, CenterChildrenVertically, Overlay } from '../styles/styles';
+import { Alert, AlertButton, Overlay } from '../styles/styles';
 import PropTypes from 'prop-types'
-import color from '../res/color';
 
 
 class AlertCustom extends Component {

@@ -1,5 +1,6 @@
 import React from 'react';
 import R from '../res/index'
+import { Divider } from '@material-ui/core';
 
 
 const introduction = () => (<div style={{ textAlign: 'center' }}>
@@ -88,11 +89,6 @@ const favouriteShows = () => (
 
 class AboutMe extends React.Component {
 
-    constructor(props) {
-        super(props)
-
-    }
-
     render() {
         return (
             <div className="Centered-Items-Horizontally" style={styles.darkBackground}>
@@ -102,13 +98,12 @@ class AboutMe extends React.Component {
 
                         {introduction()}
 
-                        <div className='Responsive-Horizontal-Card-Alignment' style={styles.content}>
+                        <br />
+
+                        <div className='Responsive-Horizontal-Card-Alignment CenterJustify CenterAlign'>
                             {blogs()}
-                            <br />
                             {techBooks()}
-                            <br />
                             {motivationBooks()}
-                            <br />
                             {favouriteShows()}
                         </div>
                     </div>

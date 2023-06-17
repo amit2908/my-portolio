@@ -3,7 +3,6 @@ import AppleIcon from '@material-ui/icons/Apple';
 import PropTypes from 'prop-types'
 import { largeTitle } from '../styles/styles';
 import { Component } from 'react';
-import zIndex from '@material-ui/core/styles/zIndex';
 
 class ProjectCard extends Component {
 
@@ -38,7 +37,7 @@ class ProjectCard extends Component {
 
     render(){
         const props = this.props
-        const { rotationX, rotationY, rotationZ, zIndexImg } = this.state
+        const { rotationX, zIndexImg } = this.state
         return (
             <div className='Project-card' style={props.style}>
                 <div className='Project-card-image-view'>

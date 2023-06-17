@@ -149,8 +149,48 @@ a.App-header-link:not(:hover)  {
 .Centered-Items-Vertically {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
 }
+
+.CenterAlign {
+  align-items: center;
+}
+
+.CenterJustify {
+  justify-content: center;
+}
+
+.EndToEnd{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.Leading-Col {
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-start;
+}
+
+.Leading-Row {
+  display: flex;
+  flex-direction: row;
+  justify-items: flex-start;
+  align-items: flex-start;
+}
+
+.Trailing-Col {
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-end;
+}
+
+.Width70Percent {
+  width: 70%;
+}
+
 
 .Page-container-vertical {
   display: flex;
@@ -204,7 +244,53 @@ a.App-header-link:not(:hover)  {
   transition-duration: 0.3s;
 }
 
+.RatingChip {
+  display: flex;
+  background-color: white;
+  border-width: 1px;
+  border-style: inset;
+  border-color: black;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  margin-left: 5px;
+}
 
+.RatingChipFilled {
+  background-color: #5CDB95;
+}
+
+.ChipCard {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: white;
+  border-width: 1px;
+  border-style: inset;
+  border-color: black;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.SkillChip {
+  display: flex;
+  background-color: rgb(103, 231, 150);
+  color: #000;
+  padding: 10px;
+  border-width: 1px;
+  border-style: inset;
+  border-color: black;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  margin: 10px;
+}
 
 .box-shadow {
   border-radius: 17px;
@@ -357,7 +443,6 @@ div.Overlay {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 12;
   color: #05386b;
-  width: 100px;
   height: 44px;
   text-decoration: none;
   padding-left: 10px;
@@ -513,15 +598,40 @@ box-shadow: inset 7px 7px 26px #e0e0e0,
   .DescriptionText {
     font-size: 12px;
   }
+}
+@media (max-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+  .DescriptionText {
+    font-size: 14px;
+  }
+
+  .Width70Percent {
+    width: 100%;
+  }
+
   .Responsive-Horizontal-Card-Alignment {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
-}
-@media (max-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-  .DescriptionText {
-    font-size: 14px;
+  
+
+  .RatingChip {
+    display: flex;
+    background-color: white;
+    border-width: 1px;
+    border-style: inset;
+    border-color: black;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    margin: 5px;
+  }
+  
+  .RatingChipFilled {
+    background-color: #5CDB95;
   }
 
   .menu-icon{

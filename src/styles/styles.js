@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import res from '../res';
 
 import color from '../res/color';
 

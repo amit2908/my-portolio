@@ -1,8 +1,8 @@
 import React from "react";
-import SmartphoneIcon from '@material-ui/icons/Smartphone';
+// import SmartphoneIcon from '@material-ui/icons/Smartphone';
 import Email from '@material-ui/icons/Email';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import Facebook from '@material-ui/icons/Facebook';
+// import Facebook from '@material-ui/icons/Facebook';
 import GitHub from '@material-ui/icons/GitHub';
 import { Twitter } from '@material-ui/icons'
 

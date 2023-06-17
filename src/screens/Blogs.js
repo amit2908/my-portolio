@@ -1,4 +1,3 @@
-import { border, fontWeight } from '@material-ui/system'
 import React, { Component } from 'react'
 // import { Document, Page, Text, View, StyleSheet, Rect } from '@react-pdf/renderer';
 // import { PDFViewer } from '@react-pdf/renderer';
@@ -85,11 +84,6 @@ const styles = {
    page: {
     flexDirection: 'row',
     backgroundColor: '#fff'
-  },
-  table: {
-    margin: 10,
-    padding: 10,
-    flexGrow: 1
   },
   header: {
     padding: 10,
