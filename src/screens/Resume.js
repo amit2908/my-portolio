@@ -198,15 +198,16 @@ function Resume() {
 }
 
 function Container({ title, Content, handleExpandClick, index, expanded }) {
+  const theme = localStorage.getItem('isDarkTheme')
   return (
     <div>
       <div className='Leading-Row CenterAlign standard-margin-top'>
-              <IconButton style={{transform: expanded ? 'rotate(90deg)' : 'rotate(0deg)' }} onClick={() => handleExpandClick({ index: index })}>
+              <IconButton style={{transform: expanded ? 'rotate(90deg)' : 'rotate(0deg)', color: (theme !== null && theme === 'dark') ? 'white' : 'black' } } onClick={() => handleExpandClick({ index: index })}>
                 <DoubleArrow />
               </IconButton> 
-              <h1>{title}</h1>
+              <h3>{title}</h3>
       </div>
-      <div style={{marginLeft: 45}}>{Content}</div>
+      <div className='responsive-resume-content DescriptionText'>{Content}</div>
        </div>
   )
 }

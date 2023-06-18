@@ -1,20 +1,50 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import ProjectCard from '../components/ProjectCard'
 import R from '../res/index'
 import Introduction from './Introduction'
 import ContactCard from '../components/ContactCard';
+import { Switch } from '@material-ui/core';
+import ThemeContext from '../contexts/ThemeContext';
 
-class Projects extends React.Component {
-
-    render() {
+function Projects() {
+       const theme = localStorage.getItem('isDarkTheme')
+       const [themeChange, setThemeChange] = useState(false)
         return (
-          <div className="Centered-Items-Horizontally">
-            <div className="Cover-Box Centered-Items-Veritically">
+          <div
+            className={`Centered-Items-Horizontally`}
+          >
+            <div className={`Leading-Col ${(theme !== null && theme === 'dark') ? 'Cover-Box-Dark' : 'Cover-Box'}`}>
+              <div className="standard-margin Trailing-Row CenterAlign">
+                <h4>Theme</h4>
+                <Switch
+                  checked={(theme !== null && theme === 'dark')}
+                  onChange={() => {
+                    localStorage.setItem('isDarkTheme', (theme !== null && theme === 'light') ? 'dark' : 'light')
+                    setThemeChange(!themeChange)
+                    window.location.reload()
+                  }}
+                />
+              </div>
               <Introduction />
               <ContactCard />
+              <h1 className="CenterAlign titleText standard-margin-left standard-margin-right standard-margin-bottom Centered-Text lightText fancy">
+                  BUILDING PRODUCTS AND SOLUTIONS <br /> FOR TOP COMPANIES
+              </h1>
             </div>
             <div className="Compact-Page-Size">
-             <h1 style={{alignSelf: 'start', marginVertical: 100}}>My Projects</h1>
+            <div className="thick-bordered standard-padding standard-margin">
+              <p>
+                <i>
+                  I am happy and excited to share that I have contributed in more than 25 iOS and React Native apps
+                  in my career so far, but the below mentioned are my major works out of all.
+                  Some of them are developed from scratch to deployment on
+                  AppStore directly by me. <br/> <br/>
+                  What I have earned out of my work is more than I can express. Its not just experience building products, 
+                  but also the thought process of the customers. I also got a lot of insights regarding 
+                  the process of building great user experience that brings joy to the customers as well as clients.
+                </i>
+              </p>
+            </div>
               <ProjectCard
                 title={R.string.trans.payzapp.title}
                 description={R.string.trans.payzapp.description}
@@ -72,22 +102,9 @@ class Projects extends React.Component {
               />
             </div>
 
-            <div className="thick-bordered standard-padding standard-margin">
-              <p>
-                <span>
-                  I have contributed in more than 25 iOS and React Native apps
-                  in my career so far,
-                  <br />
-                  but the above mentioned are my major works in all of that.{" "}
-                  <br />
-                  Some of them are developed from scratch to deployment on
-                  AppStore directly by me.
-                </span>
-              </p>
-            </div>
+            
           </div>
         );
-    }
 }
 
 export default Projects;
