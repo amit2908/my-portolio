@@ -10,25 +10,25 @@ function ContactCard() {
   return (
     <div className="Centered-Items-Vertically">
       <a href="mailto:ojhashubham29@gmail.com">
-        <div className="Card">
+        <div>
           <Email id='light-icon' />
         </div>
       </a>
 
       <a href="https://linkedin.com/in/shubhamojha2908/">
-        <div className="Card">
+        <div>
           <LinkedInIcon id='light-icon' />
         </div>
       </a>
 
       <a href="https://twitter.com/IamU_as_weAre1">
-        <div className="Card">
+        <div>
           <Twitter id='light-icon' />
         </div>
       </a>
 
       <a href="https://github.com/amit2908">
-        <div className="Card">
+        <div>
           <GitHub id='light-icon' />
         </div>
       </a>

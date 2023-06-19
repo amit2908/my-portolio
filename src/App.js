@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -14,13 +14,12 @@ import AboutMe from './screens/AboutMe';
 import Footer from './components/Footer';
 import Blogs from './screens/Blogs';
 
-class App extends React.Component {
+function App() {
 
-  
+  const theme = localStorage.getItem('isDarkTheme')
 
-render(){
   return (
-    <div className="App">
+    <div className={ `App ${(theme !== null && theme === 'dark') ? "Global" : "Global-light" }`}>
       <Router>
         <Route component={Root} basename=''/>
         <Switch>
@@ -35,7 +34,6 @@ render(){
       <Footer />
     </div>
   );
-}  
   
 }
 

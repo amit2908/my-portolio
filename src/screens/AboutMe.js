@@ -3,7 +3,7 @@ import R from '../res/index'
 import { Divider } from '@material-ui/core';
 
 
-const introduction = () => (<div style={{ textAlign: 'center' }}>
+const introduction = () => (<div className='Centered-Text DescriptionText'>
                             <h2>Shubham Ojha</h2>
                             <h3>Bachelor of Engineering (B.E) in "Computer Science" </h3>
                             <h3>Currently Serving as "Senior Staff Engineer" at Altimetrik India.</h3><br /><br />
@@ -19,9 +19,9 @@ const introduction = () => (<div style={{ textAlign: 'center' }}>
 
 const blogs = () => (
 <div style={styles.card}>
-                                <span style={styles.primaryText}>Blogs I follow</span><br /><br />
+                                <span className='H3'>Blogs I follow</span><br /><br />
                                 {R.string.trans.favouriteBlogs.map(function (blog, i) {
-                                    return (<span className='link'>
+                                    return (<span className='link DescriptionText'>
                                         <a href={blog.link} style={styles.secondaryText}>{blog.title}<br /><br /></a>
                                     </span>)
                                 })}
@@ -30,16 +30,16 @@ const blogs = () => (
 
  const techBooks = () => (
 <div style={styles.card}>
-                                <span style={styles.primaryText}>Tech Books I like</span><br />
+                                <span className='H3'>Tech Books I like</span><br />
                                 {R.string.trans.techBooks.map(function (book, i) {
                                     if (book.link) {
-                                        return (<p className='boxed-link'><a href={book.link}>
-                                            <span style={styles.secondaryText}>{book.title}<br /></span>
+                                        return (<p className='Non-Decorated-Link DescriptionText'><a href={book.link}>
+                                            <span>{book.title}<br /></span>
                                             <span style={styles.author}>{"— " + book.writer}<br /></span>
                                         </a></p>)
                                     } else {
-                                        return (<p>
-                                            <span style={styles.secondaryText}>{book.title}<br /></span>
+                                        return (<p className='DescriptionText'>
+                                            <span>{book.title}<br /></span>
                                             <span style={styles.author}>{"— " + book.writer}<br /></span>
                                         </p>)
                                     }
@@ -48,53 +48,86 @@ const blogs = () => (
                             </div>
  )
 
- const motivationBooks = () => (
-    <div style={styles.card}>
-                                <span style={styles.primaryText}>Motivational Books</span><br />
-                                {R.string.trans.favouriteBooks.map(function (book, i) {
-                                    if (book.link) {
-                                        return (<p className='link'><a className='boxed-link' href={book.link}>
-                                            <span style={styles.secondaryText}>{book.title}<br /></span>
-                                            <span style={styles.author}>{"— " + book.writer}<br /></span>
-                                        </a></p>)
-                                    } else {
-                                        return (<p>
-                                            <span style={styles.secondaryText}>{book.title}<br /></span>
-                                            <span style={styles.author}>{"— " + book.writer}<br /></span>
-                                        </p>)
-                                    }
+ const motivationBooks = ({ theme }) => (
+   <div style={styles.card}>
+     <span className="H3">Motivational Books</span>
+     <br />
+     {R.string.trans.favouriteBooks.map(function (book, i) {
+       if (book.link) {
+         return (
+           <p className="link DescriptionText">
+             <a className={`${(theme !== null && theme === 'dark') ? "link-dark" : "link"}, Non-Decorated-Link`} href={book.link}>
+               <span>
+                 {book.title}
+                 <br />
+               </span>
+               <span style={styles.author}>
+                 {"— " + book.writer}
+                 <br />
+               </span>
+             </a>
+           </p>
+         );
+       } else {
+         return (
+           <p className="DescriptionText">
+             <span>
+               {book.title}
+               <br />
+             </span>
+             <span style={styles.author}>
+               {"— " + book.writer}
+               <br />
+             </span>
+           </p>
+         );
+       }
+     })}
+   </div>
+ );
 
-                                })}
-                            </div>)
-
-const favouriteShows = () => (
-    <div style={styles.card}>
-                                <span style={styles.primaryText}>Favourite Shows</span><br />
-                                {R.string.trans.favouriteShows.map(function (book, i) {
-                                    if (book.link) {
-                                        return (<p className='link'><a className='boxed-link' href={book.link}>
-                                            <span style={styles.secondaryText}>{book.title}<br /></span>
-                                            {/* <span style={styles.author}>{"— " + book.writer}<br /></span> */}
-                                        </a></p>)
-                                    } else {
-                                        return (<p>
-                                            <span style={styles.secondaryText}>{book.title}<br /></span>
-                                            {/* <span style={styles.author}>{"— " + book.writer}<br /></span> */}
-                                        </p>)
-                                    }
-
-                                })}
-                            </div>)
+const favouriteShows = ({ theme }) => (
+  <div style={styles.card}>
+    <span className="H3">Favourite Shows</span>
+    <br />
+    {R.string.trans.favouriteShows.map(function (book, i) {
+      if (book.link) {
+        return (
+          <p className={`DescriptionText`}>
+            <a className={`${(theme !== null && theme === 'dark') ? "link-dark" : "link"}, Non-Decorated-Link`} href={book.link}>
+              <span>
+                {book.title}
+                <br />
+              </span>
+              {/* <span style={styles.author}>{"— " + book.writer}<br /></span> */}
+            </a>
+          </p>
+        );
+      } else {
+        return (
+          <p className="DescriptionText">
+            <span>
+              {book.title}
+              <br />
+            </span>
+            {/* <span style={styles.author}>{"— " + book.writer}<br /></span> */}
+          </p>
+        );
+      }
+    })}
+  </div>
+);
 
 
 class AboutMe extends React.Component {
 
     render() {
+        let theme = localStorage.getItem('isDarkTheme')
         return (
-            <div className="Centered-Items-Horizontally" style={styles.darkBackground}>
+            <div className="Centered-Items-Horizontally">
                 <div className='Compact-Page-Size'>
-                    <div className="Centered-Items-Horizontally" style={styles.darkBackground}>
-                        <img src={R.image.dp} alt='' style={{width:150, height:150, marginTop: 50}} id='profile-picture'  />
+                    <div className="Centered-Items-Horizontally">
+                        <img src={R.image.dp} alt='' style={{width:120, height:120, marginTop: 50}} id='profile-picture'  />
 
                         {introduction()}
 
@@ -103,8 +136,8 @@ class AboutMe extends React.Component {
                         <div className='Responsive-Horizontal-Card-Alignment CenterJustify CenterAlign'>
                             {blogs()}
                             {techBooks()}
-                            {motivationBooks()}
-                            {favouriteShows()}
+                            {motivationBooks(theme)}
+                            {favouriteShows(theme)}
                         </div>
                     </div>
                 </div>
@@ -126,20 +159,11 @@ const styles = {
     },
     primaryText: {
         fontSize: 18,
-        fontWeight: 'bold',
-        color: 'white'
+        fontWeight: 'bold'
     },
-    secondaryText: {
-        color: 'white'
-    },
+    secondaryText: { },
     author: {
-        fontStyle: 'italic',
-        fontSize: 12,
-        color: 'white'
+        fontStyle: 'italic'
     },
-    logo: { margin: '7px', width: '40px', height: '40px' },
-    darkBackground: {
-        backgroundColor: 'rgb(25,25,25)',
-        color: 'white'
-    }
+    logo: { margin: '7px', width: '40px', height: '40px' }
 }
