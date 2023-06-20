@@ -48,7 +48,7 @@ const blogs = () => (
                             </div>
  )
 
- const motivationBooks = ({ theme }) => (
+ const motivationBooks = (theme) => (
    <div style={styles.card}>
      <span className="H3">Motivational Books</span>
      <br />
@@ -86,7 +86,7 @@ const blogs = () => (
    </div>
  );
 
-const favouriteShows = ({ theme }) => (
+const favouriteShows = (theme) => (
   <div style={styles.card}>
     <span className="H3">Favourite Shows</span>
     <br />
