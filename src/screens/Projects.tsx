@@ -58,7 +58,7 @@ function Projects() {
                 techStacks={R.string.trans.payzapp.techStacks}
                 integratedFeatures={R.string.trans.payzapp.integratedFeatures}
               />
-              <div className="Divider"></div>
+              <div className={`${(theme !== null && theme === 'light') ? 'Divider' : 'Divider-dark'}`}></div>
               <ProjectCard
                 title={R.string.trans.markets.title}
                 description={R.string.trans.markets.description}
@@ -72,7 +72,7 @@ function Projects() {
                 techStacks={R.string.trans.markets.techStacks}
                 integratedFeatures={R.string.trans.markets.integratedFeatures}
               />
-              <div className="Divider"></div>
+              <div className={`${(theme !== null && theme === 'light') ? 'Divider' : 'Divider-dark'}`}></div>
               <ProjectCard
                 title={R.string.trans.pey.title}
                 description={R.string.trans.pey.description}
@@ -86,7 +86,7 @@ function Projects() {
                 techStacks={R.string.trans.pey.techStacks}
                 integratedFeatures={R.string.trans.pey.integratedFeatures}
               />
-              <div className="Divider"></div>
+              <div className={`${(theme !== null && theme === 'light') ? 'Divider' : 'Divider-dark'}`}></div>
               <ProjectCard
                 title={R.string.trans.orgamax.title}
                 description={R.string.trans.orgamax.description}

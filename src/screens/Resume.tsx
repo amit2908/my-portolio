@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import RatingCardList from '../components/RatingCardList';
-import { summary, skills, workExperience, education, interests } from '../res/strings/ResumeData'
 import ProfileSummary from '../components/ProfileSummary';
 import ChipCard from '../components/ChipCard';
 import WorkExperienceList from '../components/WorkExperienceList';

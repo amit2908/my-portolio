@@ -193,7 +193,6 @@ a.App-header-link:not(:hover)  {
 .Centered-Items-Vertically {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -428,22 +427,19 @@ a.SideBar-link:hover {
   color: red;
 }
 
-a:link {
-  text-decoration: none;
-  color: black;
-}
-
 .link {
-  text-decoration: none;
-  color: black;
+  color: darkslategray
 }
 
 .link-dark {
-  text-decoration: none;
   color: white;
 }
 
-.link :hover {
+.link:hover {
+  text-decoration: underline;
+}
+
+.link-dark:hover{
   text-decoration: underline;
 }
 
@@ -454,8 +450,13 @@ a:link {
 }
 
 .Divider {
-  height: 1px;
-  background-color: black;
+  height: 0.3mm;
+  background-color: darkslategray;
+}
+
+.Divider-dark {
+  height: 0.3mm;
+  background-color: rgb(255, 255, 255);
 }
 
 .Project-card {
@@ -624,7 +625,8 @@ a.no-decoration-link {
 
 
 .Hire-me-text-area{ 
-  height: 280px ; width: 60%; margin: 30px;
+  height: 40vh;
+  width: 60%; margin: 30px;
   padding: 20px;
   border-color: white;
   border-radius: 10px;
@@ -742,7 +744,7 @@ box-shadow: inset 7px 7px 26px #e0e0e0,
 
   .RatingChip {
     display: flex;
-    background-color: white;
+    background-color: transparent;
     border-width: 1px;
     border-style: inset;
     border-color: black;
@@ -815,7 +817,7 @@ box-shadow: inset 7px 7px 26px #e0e0e0,
     object-fit: cover;
   }
 
-  .Hire-me-text-area { height: 500px; width: 80%; margin-top: 30px; margin-bottom: 30px }
+  .Hire-me-text-area { height: 40vh; width: 80%; margin-top: 30px; margin-bottom: 30px }
 
 }
 @media (min-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
