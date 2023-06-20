@@ -1,8 +1,6 @@
 import React from 'react'
 
-type Summary = Array<string>
-
-function ProfileSummary(props: { summary: Summary, showDetail: Boolean }) {
+function ProfileSummary(props: { summary: Array<string>, showDetail: Boolean }) {
   const { summary, showDetail } = props;
 
   const comp = () => {

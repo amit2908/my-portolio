@@ -538,6 +538,7 @@ div.Overlay {
 
 .App-button {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: fit-content;
   font-size: 12;
   color: #05386b;
   height: 44px;

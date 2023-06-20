@@ -1,11 +1,11 @@
 import React from 'react'
 
-type Education = {
+export type Education = {
     institutionName: String,
     degree: String,
     field: String,
     fromDate: String | Date,
-    toDate: String | Date,
+    toDate: String | Date | null,
 }
 
 function EducationCard(props: {educationItem: Education}) {

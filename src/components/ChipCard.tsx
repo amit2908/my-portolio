@@ -1,8 +1,8 @@
 import React from 'react'
 
 type Card = {
-  name: string,
-  rating: string
+  name: String,
+  rating: number
 }
 
 function ChipCard(props: {
