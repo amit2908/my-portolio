@@ -1,8 +1,9 @@
 import React from 'react';
-import AppleIcon from '@material-ui/icons/Apple';
+import Launch from '@material-ui/icons/Launch';
 import PropTypes from 'prop-types'
 import { largeTitle } from '../styles/styles';
 import { Component } from 'react';
+import R from '../res/index'
 
 class ProjectCard extends Component {
 
@@ -12,6 +13,7 @@ class ProjectCard extends Component {
     }
 
     render(){
+        const theme = localStorage.getItem('isDarkTheme')
         const props = this.props
         return (
             <div className='Project-card' style={props.style}>
@@ -29,12 +31,11 @@ class ProjectCard extends Component {
                     <span style={styles.secondaryText}>{props.integratedFeatures.reduce((x, y) => { return (x + ", " + y) })}</span><br />
                     {props.domain &&
                         <span><span style={styles.primaryText}>Domain: </span><br /><span style={styles.secondaryText}>{props.domain}</span></span>}
-                    <br />
                     {props.appStoreLink &&
-                        <span>
-                            <AppleIcon />
-                            <a href={props.appStoreLink}>
-                                View App on AppStore
+                        <span className='Leading-Row CenterAlign standard-margin-vertical'>
+                            <img src={R.image.others.appstore} style={{width: 30, height: 30, marginRight: 10}}/>
+                            <a href={props.appStoreLink} className={`${ theme !== null && theme === "dark" ? "link-dark" : "link" } Non-Decorated-Link`}>
+                                AppStore
                             </a>
                         </span>
                     }

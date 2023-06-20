@@ -13,6 +13,7 @@ import markets1 from '../images/markets/MarketsHome.png'
 import markets2 from '../images/markets/MarketseStore.png'
 import marketsLogo from '../images/markets/logo.png'
 import pzLogo from '../images/payzapp/pzAppIcon.webp'
+import appstore from '../images/appstore.png'
 
 import dp from '../images/dp2.jpeg'
 
@@ -41,7 +42,7 @@ const markets = {
 }
 
 const others = {
-
+    appstore: appstore
 }
 
 export default {

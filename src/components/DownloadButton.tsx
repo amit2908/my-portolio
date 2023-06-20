@@ -6,7 +6,7 @@ function DownloadButton(props: { link: string }) {
   return (
     <div className="App-button">
       <DownloadIcon style={{ padding: 10 }} />
-      <a href={link} target="_blank" download>
+      <a className='no-decoration-link' href={link} target="_blank" download>
         Download!
       </a>
     </div>
