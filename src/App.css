@@ -742,7 +742,7 @@ box-shadow: inset 7px 7px 26px #e0e0e0,
 
   .RatingChip {
     display: flex;
-    background-color: white;
+    background-color: transparent;
     border-width: 1px;
     border-style: inset;
     border-color: black;
