@@ -7,22 +7,17 @@ import { Switch } from '@material-ui/core';
 import ThemeContext from '../contexts/ThemeContext';
 
 function Projects() {
-       const theme = localStorage.getItem('isDarkTheme')
-       const [themeChange, setThemeChange] = useState(false)
+      const { theme, switchChecked, handleSwitch } = useContext(ThemeContext);
         return (
           <div
             className={`Centered-Items-Horizontally`}
           >
-            <div className={`Leading-Col ${(theme !== null && theme === 'dark') ? 'Cover-Box-Dark' : 'Cover-Box'}`}>
+            <div className={`Leading-Col ${(theme === 'dark') ? 'Cover-Box-Dark' : 'Cover-Box'}`}>
               <div className="standard-margin Trailing-Row CenterAlign">
                 <h4>Theme</h4>
                 <Switch
-                  checked={(theme !== null && theme === 'dark')}
-                  onChange={() => {
-                    localStorage.setItem('isDarkTheme', (theme !== null && theme === 'light') ? 'dark' : 'light')
-                    setThemeChange(!themeChange)
-                    window.location.reload()
-                  }}
+                  checked={switchChecked}
+                  onChange={() => handleSwitch()}
                 />
               </div>
               <Introduction />
@@ -58,7 +53,7 @@ function Projects() {
                 techStacks={R.string.trans.payzapp.techStacks}
                 integratedFeatures={R.string.trans.payzapp.integratedFeatures}
               />
-              <div className={`${(theme !== null && theme === 'light') ? 'Divider' : 'Divider-dark'}`}></div>
+              <div className={`${(theme === 'light') ? 'Divider' : 'Divider-dark'}`}></div>
               <ProjectCard
                 title={R.string.trans.markets.title}
                 description={R.string.trans.markets.description}
@@ -72,7 +67,7 @@ function Projects() {
                 techStacks={R.string.trans.markets.techStacks}
                 integratedFeatures={R.string.trans.markets.integratedFeatures}
               />
-              <div className={`${(theme !== null && theme === 'light') ? 'Divider' : 'Divider-dark'}`}></div>
+              <div className={`${(theme === 'light') ? 'Divider' : 'Divider-dark'}`}></div>
               <ProjectCard
                 title={R.string.trans.pey.title}
                 description={R.string.trans.pey.description}
@@ -86,7 +81,7 @@ function Projects() {
                 techStacks={R.string.trans.pey.techStacks}
                 integratedFeatures={R.string.trans.pey.integratedFeatures}
               />
-              <div className={`${(theme !== null && theme === 'light') ? 'Divider' : 'Divider-dark'}`}></div>
+              <div className={`${(theme === 'light') ? 'Divider' : 'Divider-dark'}`}></div>
               <ProjectCard
                 title={R.string.trans.orgamax.title}
                 description={R.string.trans.orgamax.description}

@@ -12,7 +12,7 @@ function WorkExperienceCard(props: { workExperience: WorkExperience}) {
     const { workExperience } = props;
   return (
     <div className='bordered standard-padding standard-margin-vertical'>
-      <div className="EndToEnd">
+      <div className="EndToEnd Row">
         <div>
           <h3>{workExperience.name}</h3>
           {workExperience.designation}

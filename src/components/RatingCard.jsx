@@ -10,7 +10,7 @@ function RatingCard({ title, rating }) {
     }
 
     return (
-        <div className='Centered-Items-Vertically Wrap EndToEnd CenterAlign'>
+        <div className='Centered-Items-Vertically Wrap EndToEnd Row CenterAlign'>
           <table>
           <h3>{title}</h3>
           <div className='Centered-Items-Vertically Wrap'>{getChips()}</div>

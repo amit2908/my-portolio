@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import R from '../res/index'
-import { Divider } from '@material-ui/core';
+import ThemeContext from '../contexts/ThemeContext';
 
 
 const introduction = () => (<div className='Centered-Text DescriptionText'>
@@ -151,32 +151,30 @@ const favouriteShows = (theme: string | null) => (
 );
 
 
-class AboutMe extends React.Component {
-
-    render() {
-        let theme: string|null = localStorage.getItem('isDarkTheme')
-        return (
-            <div className="Centered-Items-Horizontally">
-                <div className='Compact-Page-Size'>
-                    <div className="Centered-Items-Horizontally">
-                        <img src={R.image.dp} alt='' style={{width:120, height:120, marginTop: 50}} id='profile-picture'  />
-
-                        {introduction()}
-
-                        <br />
-
-                        <div className='Responsive-Horizontal-Card-Alignment'>
-                            {blogs(theme)}
-                            {techBooks()}
-                            {motivationBooks(theme)}
-                            {favouriteShows(theme)}
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        );
-    }
+function AboutMe() {
+  const { theme } = useContext(ThemeContext);
+  return (
+    <div className="Centered-Items-Horizontally">
+      <div className="Compact-Page-Size">
+        <div className="Centered-Items-Horizontally">
+          <img
+            src={R.image.dp}
+            alt=""
+            style={{ width: 120, height: 120, marginTop: 50 }}
+            id="profile-picture"
+          />
+          {introduction()}
+          <br />
+          <div className="Responsive-Horizontal-Card-Alignment">
+            {blogs(theme)}
+            {techBooks()}
+            {motivationBooks(theme)}
+            {favouriteShows(theme)}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default AboutMe;

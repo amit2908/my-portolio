@@ -1,52 +1,43 @@
-import React from 'react';
-import Launch from '@material-ui/icons/Launch';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types'
 import { largeTitle } from '../styles/styles';
-import { Component } from 'react';
 import R from '../res/index'
+import ThemeContext from '../contexts/ThemeContext';
 
-class ProjectCard extends Component {
+function ProjectCard({ style, title, description, logo, client, language, techStacks, integratedFeatures, domain, appStoreLink, screen1, screen2  }) {
+    const { theme } = useContext(ThemeContext);
 
-    constructor(props){
-        super(props)
-        this.props = props
-    }
-
-    render(){
-        const theme = localStorage.getItem('isDarkTheme')
-        const props = this.props
         return (
-            <div className='Project-card' style={props.style}>
+            <div className={'Project-card'} style={style}>
                 <div className="Project-card-description DescriptionText">
                     <div className='Project-card-title'>
-                        <img src={props.logo} alt='' style={styles.logo} />
-                        <span style={largeTitle}>{props.title}</span>
+                        <img src={logo} alt='' style={styles.logo} />
+                        <span style={largeTitle}>{title}</span>
                     </div>
-                    <span style={styles.secondaryText}>{props.description}</span><br />
-                    <span style={styles.primaryText}>Client: </span><span style={styles.secondaryText}>{props.client}</span><br />
-                    <span style={styles.primaryText}>Language: </span><span style={styles.secondaryText}>{props.language}</span><br />
+                    <span style={styles.secondaryText}>{description}</span><br />
+                    <span style={styles.primaryText}>Client: </span><span style={styles.secondaryText}>{client}</span><br />
+                    <span style={styles.primaryText}>Language: </span><span style={styles.secondaryText}>{language}</span><br />
                     <span style={styles.primaryText}>Technologies: </span>
-                    <span style={styles.secondaryText}>{props.techStacks.reduce((x, y) => { return (x + ", " + y) })}</span><br />
+                    <span style={styles.secondaryText}>{techStacks.reduce((x, y) => { return (x + ", " + y) })}</span><br />
                     <span style={styles.primaryText}>Features Integrated: </span>
-                    <span style={styles.secondaryText}>{props.integratedFeatures.reduce((x, y) => { return (x + ", " + y) })}</span><br />
-                    {props.domain &&
-                        <span><span style={styles.primaryText}>Domain: </span><br /><span style={styles.secondaryText}>{props.domain}</span></span>}
-                    {props.appStoreLink &&
+                    <span style={styles.secondaryText}>{integratedFeatures.reduce((x, y) => { return (x + ", " + y) })}</span><br />
+                    {domain &&
+                        <span><span style={styles.primaryText}>Domain: </span><br /><span style={styles.secondaryText}>{domain}</span></span>}
+                    {appStoreLink &&
                         <span className='Leading-Row CenterAlign standard-margin-vertical'>
                             <img src={R.image.others.appstore} style={{width: 30, height: 30, marginRight: 10}}/>
-                            <a href={props.appStoreLink} className={`${ theme !== null && theme === "dark" ? "link-dark" : "link" } Non-Decorated-Link`}>
+                            <a href={appStoreLink} className={`${theme === "dark" ? "link-dark" : "link" } Non-Decorated-Link`}>
                                 AppStore
                             </a>
                         </span>
                     }
                     <div className='Project-card-image-view'>
-                    <img src={props.screen1} alt='' className="Project-card-image" />  {/* onMouseOver={() => this.rotate()} style={{tranform: `rotate(${rotationX}deg)`}} /> */}
-                    <img src={props.screen2} alt='' className="Project-card-image" />
+                    <img src={screen1} alt='' className="Project-card-image" />  {/* onMouseOver={() => this.rotate()} style={{tranform: `rotate(${rotationX}deg)`}} /> */}
+                    <img src={screen2} alt='' className="Project-card-image" />
                 </div>
                 </div>
             </div>
         )
-    }
 }
 
 ProjectCard.propTypes = {
@@ -72,11 +63,11 @@ const styles = {
     },
     logo: { 
     marginRight: '10px', 
-    width: '100px', 
-    height: '100px',
+    width: '80px', 
+    height: '80px',
     borderStyle: 'solid',
     borderWidth: '1px',
-    borderRadius: '22px',
+    borderRadius: '18px',
     borderColor: 'gray' 
  }
 }

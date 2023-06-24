@@ -1,38 +1,16 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useState } from 'react';
 import './App.css';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
-
-import Root from './screens/Root';
-import Projects from './screens/Projects';
-import Resume from './screens/Resume';
-import ContactMe from './screens/ContactMe';
-import AboutMe from './screens/AboutMe';
-import Footer from './components/Footer';
-import Blogs from './screens/Blogs';
+import { NavProvider } from './contexts/NavContext';
+import { ThemeProvider } from './contexts/ThemeContext';
+import RoutedApp from './RoutedApp';
 
 function App() {
-
-  const theme = localStorage.getItem('isDarkTheme')
-
   return (
-    <div className={ `App ${(theme !== null && theme === 'dark') ? "Global" : "Global-light" }`}>
-      <Router>
-        <Route component={Root} basename=''/>
-        <Switch>
-          <Route path='/projects' component={Projects} />
-          <Route path='/resume' component={Resume} />
-          <Route path='/contactMe' component={ContactMe} />
-          <Route path='/aboutMe' component={AboutMe} />
-          <Route path='/blogs' component={Blogs} />
-          <Route path='/' component={Projects} />
-        </Switch>
-      </Router>
-      <Footer />
-    </div>
+    <NavProvider>
+      <ThemeProvider>
+        <RoutedApp />
+      </ThemeProvider>
+    </NavProvider>
   );
   
 }

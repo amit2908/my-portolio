@@ -95,9 +95,9 @@
 }
 
 .Bubble-Out {
-  background-color: white;
+  /* background-color: white; */
   color: #05386b;
-  transform: scale3d(1.2, 1.2, 1.2);
+  /* transform: scale3d(1.2, 1.2, 1.2); */
   text-decoration: none;
   text-align: center;
   line-height: 64px;
@@ -105,7 +105,7 @@
 }
 
 .Bubble-Out-Sidebar {
-  background-color: white;
+  /* background-color: white; */
   color: #05386b;
   text-decoration: none;
   text-align: center;
@@ -114,14 +114,14 @@
 }
 
 a.App-header-link:hover {
-  background-color: white;
+  /* background-color: white; */
   color: #05386b;
-  animation: menu-bubble-out 1s forwards cubic-bezier(0.19, 1, 0.22, 1);
+  /* animation: menu-bubble-out 1s forwards cubic-bezier(0.19, 1, 0.22, 1); */
 }
 
 a.App-header-link:not(:hover)  {
   transition-duration: 0.3s;
-  animation: menu-bubble-in 1s cubic-bezier(0.19, 1, 0.22, 1);
+  /* animation: menu-bubble-in 1s cubic-bezier(0.19, 1, 0.22, 1); */
 }
 
 .Header-title {
@@ -210,8 +210,23 @@ a.App-header-link:not(:hover)  {
 
 .EndToEnd{
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+}
+
+.Row {
+  flex-direction: row;
+}
+
+.Col {
+  flex-direction: column;
+}
+
+.Col-Rev {
+  flex-direction: column-reverse;
+}
+
+.Row-Rev {
+  flex-direction: row-reverse;
 }
 
 .Wrap {
@@ -222,6 +237,10 @@ a.App-header-link:not(:hover)  {
   display: flex;
   flex-direction: column;
   justify-items: flex-start;
+}
+
+.Leading-X {
+  align-items: flex-start;
 }
 
 .Trailing-Col {
@@ -563,6 +582,7 @@ div.Overlay {
 
 .App-footer-bg {
   position: relative;
+  height: fit-content;
     /* background-image: linear-gradient(rgba(229,60,31), rgb(240, 108, 85)); */
     background-color: #5CDB95;
     color: white;

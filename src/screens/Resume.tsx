@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import RatingCardList from '../components/RatingCardList';
 import ProfileSummary from '../components/ProfileSummary';
 import ChipCard from '../components/ChipCard';
@@ -9,6 +9,7 @@ import { DoubleArrow } from '@material-ui/icons';
 import { IconButton, Button } from '@material-ui/core';
 import useFetch  from '../network/useFetch';
 import { ResumeData } from '../network/resumeModel';
+import ThemeContext from '../contexts/ThemeContext';
 
 function Resume() {
   const [expand, setExpand] = useState(Array(13).fill(true));
@@ -265,14 +266,14 @@ function Container(props: {
   expanded?: boolean;
 }) {
   const { title, Content, handleExpandClick, index, expanded} = props;
-  const theme = localStorage.getItem("isDarkTheme");
+  const { theme } = useContext(ThemeContext);
   return (
     <div>
       <div className="Leading-Row CenterAlign standard-margin-top">
         <IconButton
           style={{
             transform: expanded ? "rotate(90deg)" : "rotate(0deg)",
-            color: theme !== null && theme === "dark" ? "white" : "black"
+            color: theme === "dark" ? "white" : "black"
           }}
           onClick={() => handleExpandClick(index)}
         >
