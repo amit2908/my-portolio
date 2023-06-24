@@ -4,12 +4,12 @@ import './index.css';
 import App from './App';
 import './res/fonts/advanced_sans_serif_7.ttf'
 import * as serviceWorker from './serviceWorker';
-import { HashRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(<React.StrictMode>
-    <HashRouter>
+    <BrowserRouter>
       <App />
-    </HashRouter>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root'));
 

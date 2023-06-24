@@ -11,7 +11,7 @@ export type Education = {
 function EducationCard(props: {educationItem: Education}) {
     const { educationItem }  = props;
   return (
-      <div className='EndToEnd Wrap bordered standard-padding standard-margin-vertical'>
+      <div className='EndToEnd Row Wrap bordered standard-padding standard-margin-vertical'>
         <div className="Leading-Col">
           <b>{educationItem.institutionName}</b>
           {educationItem.degree}

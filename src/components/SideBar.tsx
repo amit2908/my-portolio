@@ -1,15 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types'
 import R from '../res/index'
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { icon } from '@fortawesome/fontawesome-svg-core/import.macro'
+import NavContext from '../contexts/NavContext';
 
-class SideBar extends React.Component{
+function SideBar(props: { title: string, hidden: boolean, handleMenuSelection: (index: number) => void, style: {} }){
+        const menus = R.string.trans.menus
+        const { navState, handleMenuSelection } = useContext(NavContext);
 
-    render(){
-        let props = this.props
-        let menus = R.string.trans.menus
         if (props.hidden) {
             return null
         }else
@@ -18,8 +18,11 @@ class SideBar extends React.Component{
                 <h2 style={{padding: 10}}>Welcome!</h2> 
 
                 <Link key={menus[0].key}
-                        onClick={() => props.handleMenuSelection(0)}
-                        className={0 === props.selectedIndex ? 'Bubble-Out-Sidebar App-header-link-bg' : 'Normal App-header-link App-header-link-bg'}
+                        onClick={() => {
+                            handleMenuSelection(0)
+                            props.handleMenuSelection(0)
+                        }}
+                        className={navState === 0 ? 'Bubble-Out-Sidebar App-header-link-bg' : 'Normal App-header-link App-header-link-bg'}
                         to={menus[0].link}
                     >
                        <div style={{alignItems: 'center'}}>
@@ -29,8 +32,11 @@ class SideBar extends React.Component{
                     </Link>
 
                     <Link key={menus[1].key}
-                        onClick={() => props.handleMenuSelection(1)}
-                        className={1 === props.selectedIndex ? 'Bubble-Out-Sidebar App-header-link-bg' : 'Normal App-header-link App-header-link-bg'}
+                        onClick={() => {
+                            handleMenuSelection(1)
+                            props.handleMenuSelection(1)
+                        }}
+                        className={1 === navState ? 'Bubble-Out-Sidebar App-header-link-bg' : 'Normal App-header-link App-header-link-bg'}
                         to={menus[1].link}
                     >
                        <div style={{alignItems: 'center'}}>
@@ -40,8 +46,11 @@ class SideBar extends React.Component{
                     </Link>
 
                     <Link key={menus[2].key}
-                        onClick={() => props.handleMenuSelection(2)}
-                        className={2 === props.selectedIndex ? 'Bubble-Out-Sidebar App-header-link-bg' : 'Normal App-header-link App-header-link-bg'}
+                        onClick={() => {
+                            handleMenuSelection(2)
+                            props.handleMenuSelection(2)
+                        }}
+                        className={2 === navState ? 'Bubble-Out-Sidebar App-header-link-bg' : 'Normal App-header-link App-header-link-bg'}
                         to={menus[2].link}
                     >
                        <div style={{alignItems: 'center'}}>
@@ -51,8 +60,11 @@ class SideBar extends React.Component{
                     </Link>
 
                     <Link key={menus[3].key}
-                        onClick={() => props.handleMenuSelection(3)}
-                        className={3 === props.selectedIndex ? 'Bubble-Out-Sidebar App-header-link-bg' : 'Normal App-header-link App-header-link-bg'}
+                        onClick={() => {
+                            handleMenuSelection(3)
+                            props.handleMenuSelection(3)
+                        }}
+                        className={3 === navState ? 'Bubble-Out-Sidebar App-header-link-bg' : 'Normal App-header-link App-header-link-bg'}
                         to={menus[3].link}
                     >
                        <div style={{alignItems: 'center'}}>
@@ -64,15 +76,7 @@ class SideBar extends React.Component{
            </div>
         );
 
-    }
-
     
-}
-
-SideBar.propTypes = {
-    title: PropTypes.string,
-    selectedIndex: PropTypes.number.isRequired,
-    handleMenuSelection: PropTypes.func.isRequired
 }
   
 export default SideBar;

@@ -13,13 +13,13 @@ const menus = [
         icon: 'file-arrow-down'
     },
      {
-        key: 3,
+        key: 2,
         title: "About Me",
         link: "/aboutMe",
         icon: 'user'
     },
     {
-        key: 4,
+        key: 3,
         title: "Contact Me",
         link: "/contactMe",
         icon: 'phone'
