@@ -190,6 +190,23 @@ a.App-header-link:not(:hover)  {
   align-items: center;
 }
 
+.Scrollable {
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.AwesomeBG {
+  background: linear-gradient(90deg, #b07640, #79a631);
+  color: white;
+}
+
+.Project-Transform {
+  transform: rotateX(40deg) rotateZ(50deg) ;
+  /* box-shadow: 11px 11px 21px #4aaf77,
+  -11px -11px 21px #6effb3; ; */
+}
+
+
 .Centered-Items-Vertically {
   display: flex;
   flex-direction: row;
@@ -528,7 +545,7 @@ img.Project-card-image {
 }
 
 img.Project-card-image:hover {
-  transform: scale(1.2);
+  transform: scale(1.5) rotateX(0deg) rotateZ(0deg);
   /* box-shadow: 0px 0px 10px 10px rgb(235, 135, 135); */
   border-radius: 10px;
   transition: ease-out;

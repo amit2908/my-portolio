@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import R from '../res/index'
 import ThemeContext from '../contexts/ThemeContext';
+import Testimonials from '../components/Testimonials';
 
 
 const introduction = () => (<div className='Centered-Text DescriptionText'>
@@ -171,6 +172,7 @@ function AboutMe() {
             {motivationBooks(theme)}
             {favouriteShows(theme)}
           </div>
+          <Testimonials />
         </div>
       </div>
     </div>
