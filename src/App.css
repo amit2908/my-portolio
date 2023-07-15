@@ -533,7 +533,8 @@ a.SideBar-link:hover {
 .Project-card-image-view {
   display: flex; 
   align-items: center; 
-  justify-content: center
+  justify-content: center;
+  /* box-shadow: 0px 20px 20px 20px rgb(60, 37, 37); */
 }
 
 .Project-card-image {
@@ -546,7 +547,6 @@ img.Project-card-image {
 
 img.Project-card-image:hover {
   transform: scale(1.5) rotateX(0deg) rotateZ(0deg);
-  /* box-shadow: 0px 0px 10px 10px rgb(235, 135, 135); */
   border-radius: 10px;
   transition: ease-out;
   transition-duration: 0.3s;
