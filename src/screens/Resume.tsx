@@ -13,7 +13,7 @@ import ThemeContext from '../contexts/ThemeContext';
 
 function Resume() {
   const [expand, setExpand] = useState(Array(13).fill(true));
-  const getResumeURL = new URL('https://upcdn.io/kW15bSn/raw/uploads/2023/06/20/resume-Uwmt.json') 
+  const getResumeURL = new URL('https://curious-coder-bucket.s3.ap-south-1.amazonaws.com/resume.json') 
   const resumeData: ResumeData | null = useFetch(getResumeURL);
 
   const handleExpandClick = (index: number) => {
