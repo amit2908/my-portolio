@@ -29,7 +29,7 @@ function Resume() {
     setExpand([...expandCopy])
   }
 
-    var resumeLink = 'https://cdn.filestackcontent.com/Y5PRbQKOQ9iWhVfP4PZS'
+    var resumeLink = 'https://curious-coder-bucket.s3.ap-south-1.amazonaws.com/resume.json'
     return (
       <div>
         <div className="Centered-Items-Horizontally">

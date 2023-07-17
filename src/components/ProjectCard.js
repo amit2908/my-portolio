@@ -32,8 +32,8 @@ function ProjectCard({ style, title, description, logo, client, language, techSt
                         </span>
                     }
                     <div className='Project-card-image-view'>
-                    <img src={screen1} alt='' className="Project-card-image" />  {/* onMouseOver={() => this.rotate()} style={{tranform: `rotate(${rotationX}deg)`}} /> */}
-                    <img src={screen2} alt='' className="Project-card-image" />
+                    <img src={screen1} alt='' className="Project-card-image Project-Transform" />  {/* onMouseOver={() => this.rotate()} style={{tranform: `rotate(${rotationX}deg)`}} /> */}
+                    <img src={screen2} alt='' className="Project-card-image Project-Transform" />
                 </div>
                 </div>
             </div>

@@ -190,6 +190,23 @@ a.App-header-link:not(:hover)  {
   align-items: center;
 }
 
+.Scrollable {
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.AwesomeBG {
+  background: linear-gradient(90deg, #b07640, #79a631);
+  color: white;
+}
+
+.Project-Transform {
+  transform: rotateX(40deg) rotateZ(50deg) ;
+  /* box-shadow: 11px 11px 21px #4aaf77,
+  -11px -11px 21px #6effb3; ; */
+}
+
+
 .Centered-Items-Vertically {
   display: flex;
   flex-direction: row;
@@ -200,8 +217,16 @@ a.App-header-link:not(:hover)  {
   align-items: center;
 }
 
+.BottomAlign {
+  align-items: baseline;
+}
+
 .CenterJustify {
   justify-content: center;
+}
+
+.BottomJustify {
+  justify-content: flex-end;
 }
 
 .CenterJustifyItems {
@@ -211,6 +236,10 @@ a.App-header-link:not(:hover)  {
 .EndToEnd{
   display: flex;
   justify-content: space-between;
+}
+
+.DisplayFlex {
+  display: flex;
 }
 
 .Row {
@@ -516,24 +545,25 @@ a.SideBar-link:hover {
 .Project-card-image-view {
   display: flex; 
   align-items: center; 
-  justify-content: center
+  justify-content: center;
+  /* box-shadow: 0px 20px 20px 20px rgb(60, 37, 37); */
 }
 
 .Project-card-image {
   margin: 15px;
   width: 200px;
+  position: relative;
 }
 img.Project-card-image {
   object-fit: contain;
 }
 
 img.Project-card-image:hover {
-  transform: scale(1.2);
-  /* box-shadow: 0px 0px 10px 10px rgb(235, 135, 135); */
+  transform: scale(1.5) rotateX(0deg) rotateZ(0deg);
   border-radius: 10px;
   transition: ease-out;
   transition-duration: 0.3s;
-  
+  z-index: 10;
 }
 
 img.Project-card-image:not(:hover) {
@@ -552,6 +582,10 @@ div.Overlay {
   width: '100%';
   height: '100%';
   background: #000; 
+}
+
+.Negative-Margin {
+  margin: -10
 }
 
 /* BUTTONS */
@@ -659,6 +693,14 @@ box-shadow: inset 7px 7px 26px #e0e0e0,
   margin-left: 45px;
 }
 
+.responsive-hidden {
+  display: none;
+}
+
+.responsive-scaled {
+  transform: none;
+}
+
 .fancy {
   @supports (background-clip: text) or (-webkit-background-clip: text) {
     background-image: 
@@ -739,8 +781,16 @@ box-shadow: inset 7px 7px 26px #e0e0e0,
   }
 }
 @media (max-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+  .responsive-scaled {
+    transform: scale(0.35);
+  }
+
   .DescriptionText {
     font-size: 14px;
+  }
+
+  .Project-Transform {
+    transform: none;
   }
 
   .titleText {
@@ -849,7 +899,15 @@ box-shadow: inset 7px 7px 26px #e0e0e0,
     display: none;
   }
 
+  
+
 }
-@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */}
-@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */
+
+}
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */
+  .responsive-hidden {
+    display:inline;
+  }
+}
 @media (min-width:1281px) { /* hi-res laptops and desktops */}
