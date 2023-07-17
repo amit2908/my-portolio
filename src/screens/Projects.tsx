@@ -8,6 +8,30 @@ import ThemeContext from '../contexts/ThemeContext';
 
 function Projects() {
       const { theme, switchChecked, handleSwitch } = useContext(ThemeContext);
+
+
+      const AppsTeam = () => {
+        return (<div className="DisplayFlex CenterJustify Row BottomAlign" style={{marginTop: 50, marginBottom: 50}}>
+
+              <img style={{width: '25%', zIndex: 1, margin: -14 }} 
+            src={R.image.markets.screen1}
+            />
+            <img style={{width: '24%', zIndex: 2, margin: -14}} 
+            src={R.image.pey.screen2}
+            />
+            <img style={{position: 'relative', width: '26%', zIndex: 3, margin: -14}} 
+            src={R.image.payzapp.screen1}
+            />
+            <img style={{position: 'relative', width: '24%', zIndex: 2, margin: -14}} 
+            src={R.image.orgamax.screen2}
+            />
+            <img style={{width: '23%', zIndex: 1, margin: -14}} 
+            src={R.image.payzapp.screen2}
+            />
+            
+            </div>)
+      }
+
         return (
           <div
             className={`Centered-Items-Horizontally`}
@@ -27,6 +51,7 @@ function Projects() {
               </h1>
             </div>
             <div className="Compact-Page-Size">
+            {<AppsTeam />}
             <div className="thick-bordered standard-padding standard-margin">
               <p>
                 <i>

@@ -172,7 +172,7 @@ function AboutMe() {
             {motivationBooks(theme)}
             {favouriteShows(theme)}
           </div>
-          <Testimonials />
+          {/* <Testimonials /> */}
         </div>
       </div>
     </div>
