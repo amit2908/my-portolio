@@ -1,13 +1,16 @@
 import React, { useContext } from 'react';
 import R from '../res/index'
 import ThemeContext from '../contexts/ThemeContext';
+import Introduction from './Introduction'
+import ContactCard from '../components/ContactCard';
+import { Switch } from '@material-ui/core';
 import Testimonials from '../components/Testimonials';
 
 
-const introduction = () => (<div className='Centered-Text DescriptionText'>
-                            <h2>Shubham Ojha</h2>
-                            <h3>Bachelor of Engineering (B.E) in "Computer Science" </h3>
-                            <h3>Currently Serving as "Senior Staff Engineer" at Altimetrik India.</h3><br /><br />
+const introduction = () => (<div className='Centered-Text DescriptionText standard-margin-top'>
+                           <i>
+                            <span>Hiiii, My name is <b>Shubham Ojha</b>.<br/> I am a graduate in <b>"Computer Science"</b> from <b>"Shri Vaishnav Institute of Technology and Science, Indore"</b>.
+                            Currently Serving as "Senior Staff Engineer" at Altimetrik India.</span><br /><br />
                             <span><i>I am self-motivated programmer. Love to code especially when I solve problems of others.<br />
                                 My favourite pass-time is product design, reading books and trekking mountains.<br/>
                                 Open source fan. Dark theme lover. Animation geek.<br/>
@@ -15,7 +18,7 @@ const introduction = () => (<div className='Centered-Text DescriptionText'>
                             <span><i>Whenever I feel bored, I watch sci-fi movies. I am fan of the Arrow series.<br/><br/>
                                     My strength - Perseverance and Empathy<br/>
                                     My weakness - Will let you know personally. 
-                                </i></span><br />
+                                </i></span><br /></i>
                         </div>)
 
 const blogs = (theme: string | null) => {
@@ -153,26 +156,36 @@ const favouriteShows = (theme: string | null) => (
 
 
 function AboutMe() {
-  const { theme } = useContext(ThemeContext);
+  const { theme, switchChecked, handleSwitch } = useContext(ThemeContext);
   return (
     <div className="Centered-Items-Horizontally">
+      <div
+          className={`Leading-Col ${
+            theme === "dark" ? "Cover-Box-Dark" : "Cover-Box"
+          }`}
+        >
+          <div className="standard-margin-right Trailing-Row CenterAlign">
+            <h4>Theme</h4>
+            <Switch checked={switchChecked} onChange={() => handleSwitch()} />
+          </div>
+          <Introduction />
+          <ContactCard />
+          <div>
+            <h1 className="CenterAlign titleText standard-margin-left standard-margin-right Centered-Text lightText fancy">
+              BUILDING PRODUCTS AND SOLUTIONS <br /> FOR TOP COMPANIES
+            </h1>
+          </div>
+        </div>
       <div className="Compact-Page-Size">
         <div className="Centered-Items-Horizontally">
-          <img
-            src={R.image.dp}
-            alt=""
-            style={{ width: 120, height: 120, marginTop: 50 }}
-            id="profile-picture"
-          />
           {introduction()}
           <br />
-          <div className="Responsive-Horizontal-Card-Alignment">
+          <div style={{marginTop: 20}} className="Responsive-Horizontal-Card-Alignment">
             {blogs(theme)}
             {techBooks()}
             {motivationBooks(theme)}
             {favouriteShows(theme)}
           </div>
-          {/* <Testimonials /> */}
         </div>
       </div>
     </div>

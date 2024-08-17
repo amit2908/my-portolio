@@ -13,7 +13,7 @@ import ThemeContext from '../contexts/ThemeContext';
 
 function Resume() {
   const [expand, setExpand] = useState(Array(13).fill(true));
-  const getResumeURL = new URL('https://curious-coder-bucket.s3.ap-south-1.amazonaws.com/resume.json') 
+  const getResumeURL = new URL('https://pub-4c00791aede44c328f46fcd1c3efa9bd.r2.dev/resume.json') 
   const resumeData: ResumeData | null = useFetch(getResumeURL);
 
   const handleExpandClick = (index: number) => {
@@ -29,7 +29,7 @@ function Resume() {
     setExpand([...expandCopy])
   }
 
-    var resumeLink = 'https://curious-coder-bucket.s3.ap-south-1.amazonaws.com/resume.json'
+    var resumeLink = 'https://pub-4c00791aede44c328f46fcd1c3efa9bd.r2.dev/SHUBHAM_12_August_2024.pdf'
     return (
       <div>
         <div className="Centered-Items-Horizontally">
@@ -269,19 +269,21 @@ function Container(props: {
   const { theme } = useContext(ThemeContext);
   return (
     <div>
-      <div className="Leading-Row CenterAlign standard-margin-top">
+      <div id={theme === 'dark' ? 'resume-item-container-header-dark':'resume-item-container-header'} style={{ backgroundColor: 'lightblue' }} className="Leading-Row CenterAlign standard-margin-top"
+        onClick={() => handleExpandClick(index)}>
+        <h3 style={{ width: '100%', paddingLeft: 16, lineHeight: 0.5}}>{title}</h3>
         <IconButton
           style={{
+            position:'relative',
+            right: 5,
             transform: expanded ? "rotate(90deg)" : "rotate(0deg)",
             color: theme === "dark" ? "white" : "black"
           }}
-          onClick={() => handleExpandClick(index)}
         >
           <DoubleArrow />
         </IconButton>
-        <h3>{title}</h3>
       </div>
-      <div className="responsive-resume-content DescriptionText">{Content}</div>
+      <div className={`${expanded ? 'showBlock': 'hideBlock'} DescriptionText`}>{Content}</div>
     </div>
   );
 }

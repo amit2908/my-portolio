@@ -14,8 +14,9 @@ const QuickLinks = () => {
   const { navState, handleMenuSelection } = useContext(NavContext);
 
   return (
-    <div className="Leading-Col Leading-X standard-margin">
+    <div className="quicklinks">
       <h4 style={{ color: "darkslategrey" }}>Quick Links:</h4>
+      <div className='DisplayFlex Row'>
       {menus.map((menu, i) => {
         return (
           <Link
@@ -27,6 +28,7 @@ const QuickLinks = () => {
           </Link>
         );
       })}
+      </div>
     </div>
   );
 };
@@ -81,7 +83,7 @@ const Footer = (props) => {
         </div>
         <br />
         <br />
-        <span className="copy-right">©2023 www.curious-coder.in</span>
+        <span className="copy-right">©2024 www.curious-coder.in</span>
       </div>
     );
 }

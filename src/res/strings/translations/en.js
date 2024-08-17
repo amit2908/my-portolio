@@ -1,5 +1,11 @@
 
 const menus = [
+    {
+        key: 2,
+        title: "About Me",
+        link: "/aboutMe",
+        icon: 'user'
+    },
      {
         key: 0,
         title: "My Works",
@@ -11,12 +17,6 @@ const menus = [
         title: "Resume",
         link: "/resume",
         icon: 'file-arrow-down'
-    },
-     {
-        key: 2,
-        title: "About Me",
-        link: "/aboutMe",
-        icon: 'user'
     },
     {
         key: 3,
@@ -142,7 +142,7 @@ const favouriteBooks = [
     {
         title: "How to win friends",
         description: "",
-        link: "https://www.amazon.in/How-Win-Friends-Influence-People/dp/0091906350",
+        link: "",
         writer: "Dale Carnegie"
     },
     {

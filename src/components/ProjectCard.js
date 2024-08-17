@@ -4,11 +4,11 @@ import { largeTitle } from '../styles/styles';
 import R from '../res/index'
 import ThemeContext from '../contexts/ThemeContext';
 
-function ProjectCard({ style, title, description, logo, client, language, techStacks, integratedFeatures, domain, appStoreLink, screen1, screen2  }) {
+function ProjectCard({ ref, id, style, title, description, logo, client, language, techStacks, integratedFeatures, domain, appStoreLink, screen1, screen2  }) {
     const { theme } = useContext(ThemeContext);
 
         return (
-            <div className={'Project-card'} style={style}>
+            <div itemRef={ref} id={id} className={'Project-card'} style={style}>
                 <div className="Project-card-description DescriptionText">
                     <div className='Project-card-title'>
                         <img src={logo} alt='' style={styles.logo} />
@@ -26,7 +26,7 @@ function ProjectCard({ style, title, description, logo, client, language, techSt
                     {appStoreLink &&
                         <span className='Leading-Row CenterAlign standard-margin-vertical'>
                             <img src={R.image.others.appstore} style={{width: 30, height: 30, marginRight: 10}}/>
-                            <a href={appStoreLink} className={`${theme === "dark" ? "link-dark" : "link" } Non-Decorated-Link`}>
+                            <a style={{zIndex: 10}} href={appStoreLink} className={`${theme === "dark" ? "link-dark" : "link" } Non-Decorated-Link`}>
                                 AppStore
                             </a>
                         </span>
@@ -35,12 +35,16 @@ function ProjectCard({ style, title, description, logo, client, language, techSt
                     <img src={screen1} alt='' className="Project-card-image Project-Transform" />  {/* onMouseOver={() => this.rotate()} style={{tranform: `rotate(${rotationX}deg)`}} /> */}
                     <img src={screen2} alt='' className="Project-card-image Project-Transform" />
                 </div>
+                {/* <div className='Project-card-img-shadow'>
+                </div> */}
                 </div>
             </div>
         )
 }
 
 ProjectCard.propTypes = {
+    ref: PropTypes.object,
+    id: PropTypes.string,
     title: PropTypes.string,
     description: PropTypes.string,
     screen1: PropTypes.string,
