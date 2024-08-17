@@ -6,7 +6,7 @@ const useFetch = (url: URL) => {
     const [resumeData, setResumeData]  = useState<null|ResumeData>(null);
 
     const urlData = useEffect(() => {
-        const data = fetch(url)
+        const data = fetch(url, { method: 'GET', mode: 'cors'})
         .then((response) => response.json())
         .then((json) => {
             console.log(json)
