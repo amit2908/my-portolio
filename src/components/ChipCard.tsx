@@ -14,7 +14,7 @@ function ChipCard(props: {
   return (
     <div>
       {showDetail && (
-        <div className="ChipCard bordered standard-padding standard-margin-bottom">
+        <div className="ChipCard standard-padding-vertical standard-margin-bottom">
           {cards.map((card, index) => (
             <div key={index} className="SkillChip">
               {card.name}

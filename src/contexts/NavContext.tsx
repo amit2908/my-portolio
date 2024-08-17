@@ -1,14 +1,14 @@
 import React, { createContext, useEffect, useState } from "react";
 
-const NavContext = createContext({ navState: 0, handleMenuSelection: (index: number) => {} });
+const NavContext = createContext({ navState: 1, handleMenuSelection: (index: number) => {} });
 
 export const NavProvider = (props: {children: any}) => {
 
-    const [navState, setNavState] = useState(0); 
+    const [navState, setNavState] = useState(1); 
 
     useEffect(() => {
         let i = window.sessionStorage.getItem('selectedMenuIndex')
-        setNavState(i !== null ? parseInt(i) : 0 )
+        setNavState(i !== null ? parseInt(i) : 1 )
     }, [])
 
     const handleMenuSelection = (index: number) => {

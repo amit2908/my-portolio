@@ -3,9 +3,9 @@ import React from 'react'
 function ProfileSummary(props: { summary: Array<string>, showDetail: Boolean }) {
   const { summary, showDetail } = props;
 
-  const comp = () => {
+  const comp = (styleClass: String) => {
     return (
-    <div className="bordered standard-padding standard-margin-bottom">
+    <div className={`${styleClass} standard-margin-bottom`}>
       <ul>
         {summary.map((item, index) => (
           <li key={index} style={{ paddingBottom: 5 }}>
@@ -17,7 +17,7 @@ function ProfileSummary(props: { summary: Array<string>, showDetail: Boolean }) 
   }
 
   return (
-    showDetail && comp()
+    comp(showDetail ? 'showBlock' : 'hideBlock')
   );
 }
 

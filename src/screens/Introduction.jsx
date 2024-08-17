@@ -13,7 +13,7 @@ function Introduction() {
         width="120px"
         height="120px"
       />
-      <h1 style={{ fontSize: 20, fontFamily: "moirai" }}>Shubham Ojha</h1>
+      <h2>Shubham Ojha</h2>
     </div>
   );
 }

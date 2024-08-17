@@ -16,6 +16,7 @@ import pzLogo from '../images/payzapp/pzAppIcon.webp'
 import appstore from '../images/appstore.png'
 
 import dp from '../images/dp2.jpeg'
+import logo from '../images/logo.png'
 
 const payzapp = {
     screen1 : pz1,
@@ -51,5 +52,6 @@ export default {
     orgamax,
     dp,
     markets, 
-    others
+    others,
+    logo
 }
